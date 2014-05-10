@@ -1,0 +1,216 @@
+/* Moved presentational information not allowed in
+ * HTML 4 Strict here from template.html and wrap.pl
+ * -- 2001-01-05 henris
+ */
+
+/* use colors of the form #rgb instead of #rrggbb  since this discourages 
+ * web-unsafe colors. Web-safe colors are of the form #rgb where 
+ * values of r, g and b are one of {0,3,6,9,C,F}.
+ */
+
+.bannercell {
+	background-color: #000;
+	border: 0px;
+	padding: 0px;
+}
+.bannerlink {
+	background-color: #000;
+	color: #000;
+}
+.bordercell {
+	background-color: #000;
+}
+.titlecell{
+	background-color: #CCC;
+}
+.contentcell {
+	background-color: #FFF;
+}
+body, html {
+/*	margin: 1em; */
+	margin: 0;
+	background: #FFF;
+	color: #000;
+	font-family: sans-serif;
+}
+.nonocombanner{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+.spacercell {
+	height: 3px;
+}
+.linkcell {
+	white-space: nowrap;
+}
+.documentinfo {
+	font-size: 80%;
+}
+.listbullet {
+	margin: 0;
+}
+.horizbanner {
+	font-size: 80%;
+}
+/* Banner styles end */
+
+/* Styles for page content 
+ *
+ * First version 2001-08-01 henris@clinet.fi 
+ * Added link color 2001-08-05 henris@clinet.fi
+ *
+ * These styles are not comprehensive. These are
+ * only the very minimum required for the Strict
+ * conversion effort.
+ */
+
+/* The margin with for <body> and <html> are zero so the black
+ * border around the banner reaches the edges of the content area.
+ * On pages with horizontal layout contain the content in a 
+ * <DIV CLASS="document-body" so the rest of the page has a margin.
+ */
+
+.document-body {
+	 margin: 10px;
+}
+
+/* the horizontal menu bar should have a margin too, but smaller than
+ * the main document.
+ */
+.horizontal-menu {
+	 margin: 1px 3px;
+}
+
+a:link {
+	color: #00E;
+}
+a:visited {
+	color: #551A8B;
+}
+a:active {
+	color: #F00
+}
+/* 2007-1-28 cunnie - trying to move what was previously done
+	with tables into stylesheets
+*/
+div.nono_box { border-width:4px; border-style:solid; border-color:#000; background:#fff; text-align:left; font-style: normal; line-height: normal; font-weight: bold; font-variant: normal; text-transform: none; text-decoration: none; }
+div.nono_box_banner { color:#000; border-width:0 0 4px 0; border-color:#000; border-style:solid; background:#ccc; text-align:left; padding: 8px }
+div.nono_box_banner a { text-decoration: none; }
+div.nono_box_banner a:link { color:#000; }
+div.nono_box_banner a:visited { color:#000; }
+div.nono_box_banner a:hover { text-decoration: none; color: #aaa; }
+div.nono_box_text { font-weight:normal; margin: 2px 2px 2px 2px; padding: 8px }
+div.nono_margin { margin: 1em; }
+/* Virtually all <dt> elements on www.nono.com had the 
+ * content wrapped in a <b> element. Moving presentation here.
+ */
+dt {
+	font-weight: bold;
+}
+
+/* 2007-7-13 cunnie - table needed for top menubar that uses text and
+   images.  Should look like nono_box & nono_box_banner above.  */
+.nono_menubar_table table { border-color:red; border-spacing:4px; }
+.nono_menubar_table td { background:#ccc; border-color:black; border-style: solid; border-spacing: 4px; border-width:4px; font-weight: bold; padding: 6px; }
+.nono_menubar_table a { text-decoration: none; }
+.nono_menubar_table a:link { color:#000; }
+.nono_menubar_table a:visited { color:#000; }
+.nono_menubar_table a:hover { text-decoration: none; color: #aaa; }
+
+/* 2008-08-27 cunnie - reasonable table setup
+ */
+.simple_table table, tr { border-width: 0; margin: 0; padding: 0 }
+.simple_table td, th { background:#ccc; 
+    border-color:black; border-style: solid; border-spacing: 0; 
+    border-width:0; padding: 0; margin: 0; }
+.simple_table th { font-weight: bold; }
+.simple_table td { font-weight: normal; }
+
+/* Tables of contents and task lists deserve larger font in <dt> */
+.toc dt, .tasklist dt {
+	font-size: 120%;
+}
+
+
+/* For unified look with unconverted pages, centering level 1
+ * headings, author names and horizontal category links.
+ * When the conversion is near complete, this can be revisited.
+ */
+h1, .horiz-category-list, .author {
+	text-align: center;
+}
+
+/* These used to be single-cell tables. Moving presentation to style. */
+.important {
+	background-color: #FF9;
+	border: solid 1px #F00;
+	padding: 1em;
+}
+
+/* Replacement for nested emphasis */
+strong.stronger {
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* Replacement for nested emphasis involving even the font color */
+strong.very-strong {
+	font-weight: bold;
+	font-style: italic;
+	color: #F00;
+}
+
+/* For use with various shaded elements */
+.shaded {
+	color: #000;
+	background-color: #EEE;
+}
+div.footer { font-family: sans-serif; }
+p.copyright {
+	margin: 0 0.5em;
+	font-size: small;
+	font-family: sans-serif;
+}
+p.separator {
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+p.poem {
+	margin: 0 5em;
+	font-size: small;
+	font-family: sans-serif;
+}
+p.computer {
+	margin: 0 5em;
+	font-size: 100%;
+	font-family: monospace;
+	/* font: courier; */
+}
+li.wrong {
+	color: #F00;
+}
+
+/* hover links */
+
+/*
+a:link {font-family:   verdana, arial, helvetica, sans-serif;
+        font-color: "#226";
+        text-decoration: none; color: #226}
+
+a:visited {font-family:   verdana, arial, helvetica, sans-serif;
+        font-color: "#226";
+        text-decoration: none; color: #226}
+
+a:active {font-family:   verdana, arial, helvetica, sans-serif;
+        font-color: "#226";
+        text-decoration: none; color: #226}
+
+a:hover {font-family:   verdana, arial, helvetica, sans-serif;
+         font-color: "#226";
+         text-decoration: underline; color: #48A }
+*/
+
+a:hover { color: #48A }
+

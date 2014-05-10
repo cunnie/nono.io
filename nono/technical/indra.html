@@ -1,0 +1,1230 @@
+<HTML>
+<HEAD>
+<TITLE>
+
+Nono - Internet - indra.nono.com - 06/26/98
+</TITLE></HEAD>
+
+<BODY BGCOLOR='#FFFFFF'>
+
+<A NAME="top"></A>
+<CENTER>
+<H1>
+
+Nono - Internet - indra.nono.com - 06/26/98
+</H1>
+</CENTER>
+
+<H2>Table of Contents</H2>
+<OL>
+</UL>
+<LI><A HREF="#NETWORK">NETWORK</A></LI>
+<UL>
+
+<LI><A HREF="#MAC addressess (lanscan)">MAC addressess (lanscan)</A></LI>
+
+
+<LI><A HREF="#IP addresses (ifconfig)">IP addresses (ifconfig)</A></LI>
+
+
+<LI><A HREF="#Network Routing Tables (netstat -rn)">Network Routing Tables (netstat -rn)</A></LI>
+
+
+<LI><A HREF="#Network Interfaces (netstat -rin)">Network Interfaces (netstat -rin)</A></LI>
+
+
+<LI><A HREF="#Hosts Table (/etc/hosts)">Hosts Table (/etc/hosts)</A></LI>
+
+
+<LI><A HREF="#DNS generation (doit)">DNS generation (doit)</A></LI>
+
+
+<LI><A HREF="#DNS boot file (/etc/named.boot)">DNS boot file (/etc/named.boot)</A></LI>
+
+
+<LI><A HREF="#DNS client info (/etc/resolv.conf)">DNS client info (/etc/resolv.conf)</A></LI>
+
+</UL>
+<LI><A HREF="#DISKS & FILESYSTEMS">DISKS & FILESYSTEMS</A></LI>
+<UL>
+
+<LI><A HREF="#Disk Hardware Paths & Device-file names (ioscan -knfC disk)">Disk Hardware Paths & Device-file names (ioscan -knfC disk)</A></LI>
+
+
+<LI><A HREF="#Physical Disk Characteristics (diskinfo)">Physical Disk Characteristics (diskinfo)</A></LI>
+
+
+<LI><A HREF="#Volume Groups (vgdisplay)">Volume Groups (vgdisplay)</A></LI>
+
+
+<LI><A HREF="#Physical Volumes (pvdisplay)">Physical Volumes (pvdisplay)</A></LI>
+
+
+<LI><A HREF="#Logical Volumes (lvdisplay)">Logical Volumes (lvdisplay)</A></LI>
+
+
+<LI><A HREF="#Filesystem Table (/etc/fstab)">Filesystem Table (/etc/fstab)</A></LI>
+
+
+<LI><A HREF="#Filesystem Sizes (bdf -l)">Filesystem Sizes (bdf -l)</A></LI>
+
+
+<LI><A HREF="#Swap Information (swapinfo)">Swap Information (swapinfo)</A></LI>
+
+</UL>
+<LI><A HREF="#MISCELLANEOUS">MISCELLANEOUS</A></LI>
+<UL>
+
+<LI><A HREF="#Devices (ioscan -nf)">Devices (ioscan -nf)</A></LI>
+
+
+<LI><A HREF="#Software (swlist)">Software (swlist)</A></LI>
+
+
+<LI><A HREF="#System Console Messages (dmesg)">System Console Messages (dmesg)</A></LI>
+
+
+<LI><A HREF="#Kernel Parameters (/stand/system)">Kernel Parameters (/stand/system)</A></LI>
+
+
+<LI><A HREF="#Interprocess Communications (ipcs)">Interprocess Communications (ipcs)</A></LI>
+
+
+<LI><A HREF="#Users (/etc/passwd)">Users (/etc/passwd)</A></LI>
+
+
+<LI><A HREF="#Groups (/etc/group)">Groups (/etc/group)</A></LI>
+
+
+<LI><A HREF="#About this documentation">About this documentation</A></LI>
+
+</UL>
+</OL>
+
+</PRE><h2><A NAME="NETWORK">NETWORK</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+
+</PRE><h2><A NAME="MAC addressess (lanscan)">MAC addressess (lanscan)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+Hardware Station        Crd Hdw   Net-Interface  NM  MAC       HP-DLPI DLPI
+Path     Address        In# State NamePPA        ID  Type      Support Mjr#
+2/0/2    0x080009873507 0   UP    lan0 snap0     1   ETHER     Yes     119
+
+</PRE><h2><A NAME="IP addresses (ifconfig)">IP addresses (ifconfig)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+lan0: flags=843<UP,BROADCAST,RUNNING,MULTICAST>
+	inet 207.44.160.170 netmask ffffffc0 broadcast 207.44.160.191
+
+</PRE><h2><A NAME="Network Routing Tables (netstat -rn)">Network Routing Tables (netstat -rn)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+Routing tables
+Dest/Netmask          Gateway            Flags  Refs       Use  Interface  Pmtu
+127.0.0.1             127.0.0.1          UH       0      23166  lo0        4136
+207.44.160.170        207.44.160.170     UH       0       1660  lan0       4136
+207.44.160.171        207.44.160.171     UH       0          0  lan0:29    4136
+207.44.160.173        207.44.160.173     UH       0          0  lan0:30    4136
+207.44.160.174        207.44.160.174     UH       0          0  lan0:31    4136
+207.44.160.175        207.44.160.175     UH       0          0  lan0:32    4136
+207.44.160.176        207.44.160.176     UH       0          0  lan0:33    4136
+207.44.160.177        207.44.160.177     UH       0          0  lan0:34    4136
+207.44.160.178        207.44.160.178     UH       0          0  lan0:35    4136
+207.44.160.179        207.44.160.179     UH       0          0  lan0:36    4136
+207.44.160.181        207.44.160.181     UH       0          0  lan0:37    4136
+207.44.160.182        207.44.160.182     UH       0          0  lan0:38    4136
+207.44.160.183        207.44.160.183     UH       0          0  lan0:39    4136
+207.44.160.184        207.44.160.184     UH       0          0  lan0:40    4136
+207.44.160.185        207.44.160.185     UH       0          0  lan0:41    4136
+207.44.160.186        207.44.160.186     UH       0          0  lan0:42    4136
+207.44.160.187        207.44.160.187     UH       0          0  lan0:43    4136
+207.44.160.188        207.44.160.188     UH       0          0  lan0:44    4136
+207.44.160.189        207.44.160.189     UH       0          0  lan0:45    4136
+207.44.160.130        207.44.160.130     UH       0          0  lan0:1     4136
+207.44.160.131        207.44.160.131     UH       0          0  lan0:2     4136
+207.44.160.132        207.44.160.132     UH       0          0  lan0:3     4136
+207.44.160.133        207.44.160.133     UH       0          0  lan0:4     4136
+207.44.160.134        207.44.160.134     UH       0          0  lan0:5     4136
+207.44.160.135        207.44.160.135     UH       0          0  lan0:6     4136
+207.44.160.136        207.44.160.136     UH       0          0  lan0:7     4136
+207.44.160.137        207.44.160.137     UH       0          0  lan0:8     4136
+207.44.160.138        207.44.160.138     UH       0          0  lan0:9     4136
+207.44.160.139        207.44.160.139     UH       0          0  lan0:10    4136
+207.44.160.140        207.44.160.140     UH       0          0  lan0:11    4136
+207.44.160.142        207.44.160.142     UH       0          0  lan0:13    4136
+207.44.160.143        207.44.160.143     UH       0          0  lan0:14    4136
+207.44.160.144        207.44.160.144     UH       0          0  lan0:15    4136
+207.44.160.145        207.44.160.145     UH       0          0  lan0:16    4136
+207.44.160.146        207.44.160.146     UH       0          0  lan0:17    4136
+207.44.160.147        207.44.160.147     UH       0          0  lan0:18    4136
+207.44.160.148        207.44.160.148     UH       0         14  lan0:19    4136
+207.44.160.149        207.44.160.149     UH       0          0  lan0:20    4136
+207.44.160.151        207.44.160.151     UH       0          0  lan0:21    4136
+207.44.160.152        207.44.160.152     UH       0          0  lan0:22    4136
+207.44.160.153        207.44.160.153     UH       0          0  lan0:23    4136
+207.44.160.154        207.44.160.154     UH       0          0  lan0:24    4136
+207.44.160.155        207.44.160.155     UH       0          0  lan0:25    4136
+207.44.160.156        207.44.160.156     UH       0          0  lan0:26    4136
+207.44.160.157        207.44.160.157     UH       0          0  lan0:27    4136
+207.44.160.158        207.44.160.158     UH       0          0  lan0:28    4136
+127.0.0.0             127.0.0.1          U        0          0  lo0        4136
+207.44.160.128        207.44.160.170     U       46          0  lan0       1500
+207.44.160.0          207.44.160.130     U       46          0  lan0:1     1500
+207.44.160.0          207.44.160.131     U       46          0  lan0:2     1500
+207.44.160.0          207.44.160.132     U       46          0  lan0:3     1500
+207.44.160.0          207.44.160.133     U       46          0  lan0:4     1500
+207.44.160.0          207.44.160.134     U       46          0  lan0:5     1500
+207.44.160.0          207.44.160.135     U       46          0  lan0:6     1500
+207.44.160.0          207.44.160.136     U       46          0  lan0:7     1500
+207.44.160.0          207.44.160.137     U       46          0  lan0:8     1500
+207.44.160.0          207.44.160.138     U       46          0  lan0:9     1500
+207.44.160.0          207.44.160.139     U       46          0  lan0:10    1500
+207.44.160.0          207.44.160.140     U       46          0  lan0:11    1500
+207.44.160.0          207.44.160.142     U       46          0  lan0:13    1500
+207.44.160.0          207.44.160.143     U       46          0  lan0:14    1500
+207.44.160.0          207.44.160.144     U       46          0  lan0:15    1500
+207.44.160.0          207.44.160.145     U       46          0  lan0:16    1500
+207.44.160.0          207.44.160.146     U       46          0  lan0:17    1500
+207.44.160.0          207.44.160.147     U       46          0  lan0:18    1500
+207.44.160.0          207.44.160.148     U       46          0  lan0:19    1500
+207.44.160.0          207.44.160.149     U       46          0  lan0:20    1500
+207.44.160.0          207.44.160.151     U       46          0  lan0:21    1500
+207.44.160.0          207.44.160.152     U       46          0  lan0:22    1500
+207.44.160.0          207.44.160.153     U       46          0  lan0:23    1500
+207.44.160.0          207.44.160.154     U       46          0  lan0:24    1500
+207.44.160.0          207.44.160.155     U       46          0  lan0:25    1500
+207.44.160.0          207.44.160.156     U       46          0  lan0:26    1500
+207.44.160.0          207.44.160.157     U       46          0  lan0:27    1500
+207.44.160.0          207.44.160.158     U       46          0  lan0:28    1500
+207.44.160.0          207.44.160.171     U       46          0  lan0:29    1500
+207.44.160.0          207.44.160.173     U       46          0  lan0:30    1500
+207.44.160.0          207.44.160.174     U       46          0  lan0:31    1500
+207.44.160.0          207.44.160.175     U       46          0  lan0:32    1500
+207.44.160.0          207.44.160.176     U       46          0  lan0:33    1500
+207.44.160.0          207.44.160.177     U       46          0  lan0:34    1500
+207.44.160.0          207.44.160.178     U       46          0  lan0:35    1500
+207.44.160.0          207.44.160.179     U       46          0  lan0:36    1500
+207.44.160.0          207.44.160.181     U       46          0  lan0:37    1500
+207.44.160.0          207.44.160.182     U       46          0  lan0:38    1500
+207.44.160.0          207.44.160.183     U       46          0  lan0:39    1500
+207.44.160.0          207.44.160.184     U       46          0  lan0:40    1500
+207.44.160.0          207.44.160.185     U       46          0  lan0:41    1500
+207.44.160.0          207.44.160.186     U       46          0  lan0:42    1500
+207.44.160.0          207.44.160.187     U       46          0  lan0:43    1500
+207.44.160.0          207.44.160.188     U       46          0  lan0:44    1500
+207.44.160.0          207.44.160.189     U       46          0  lan0:45    1500
+default               207.44.160.190     UG       0          0  lan0       1500
+
+</PRE><h2><A NAME="Network Interfaces (netstat -rin)">Network Interfaces (netstat -rin)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+Name           Mtu Network            Address                 Ipkts      Opkts
+lo0           4136 127.0.0.0          127.0.0.1               23168      23168
+lan0          1500 207.44.160.128     207.44.160.170         167895     264128
+lan0:1        1500 207.44.160.0       207.44.160.130             11          0
+lan0:2        1500 207.44.160.0       207.44.160.131             98          0
+lan0:3        1500 207.44.160.0       207.44.160.132            157          0
+lan0:4        1500 207.44.160.0       207.44.160.133              0          0
+lan0:5        1500 207.44.160.0       207.44.160.134             56          0
+lan0:6        1500 207.44.160.0       207.44.160.135            447          0
+lan0:7        1500 207.44.160.0       207.44.160.136            122          0
+lan0:8        1500 207.44.160.0       207.44.160.137              0          0
+lan0:9        1500 207.44.160.0       207.44.160.138              9          0
+lan0:10       1500 207.44.160.0       207.44.160.139              0          0
+lan0:11       1500 207.44.160.0       207.44.160.140           1469          0
+lan0:13       1500 207.44.160.0       207.44.160.142            163          0
+lan0:14       1500 207.44.160.0       207.44.160.143           2426          0
+lan0:15       1500 207.44.160.0       207.44.160.144            389          0
+lan0:16       1500 207.44.160.0       207.44.160.145              0          0
+lan0:17       1500 207.44.160.0       207.44.160.146             11          0
+lan0:18       1500 207.44.160.0       207.44.160.147          19931          0
+lan0:19       1500 207.44.160.0       207.44.160.148          53135         14
+lan0:20       1500 207.44.160.0       207.44.160.149              0          0
+lan0:21       1500 207.44.160.0       207.44.160.151            236          0
+lan0:22       1500 207.44.160.0       207.44.160.152             79          0
+lan0:23       1500 207.44.160.0       207.44.160.153            248          0
+lan0:24       1500 207.44.160.0       207.44.160.154           1690          0
+lan0:25       1500 207.44.160.0       207.44.160.155            788          0
+lan0:26       1500 207.44.160.0       207.44.160.156           3436          0
+lan0:27       1500 207.44.160.0       207.44.160.157             17          0
+lan0:28       1500 207.44.160.0       207.44.160.158           1218          0
+lan0:29       1500 207.44.160.0       207.44.160.171           5554          0
+lan0:30       1500 207.44.160.0       207.44.160.173             11          0
+lan0:31       1500 207.44.160.0       207.44.160.174              0          0
+lan0:32       1500 207.44.160.0       207.44.160.175            238          0
+lan0:33       1500 207.44.160.0       207.44.160.176              0          0
+lan0:34       1500 207.44.160.0       207.44.160.177            153          0
+lan0:35       1500 207.44.160.0       207.44.160.178             11          0
+lan0:36       1500 207.44.160.0       207.44.160.179              0          0
+lan0:37       1500 207.44.160.0       207.44.160.181              0          0
+lan0:38       1500 207.44.160.0       207.44.160.182             11          0
+lan0:39       1500 207.44.160.0       207.44.160.183              0          0
+lan0:40       1500 207.44.160.0       207.44.160.184             13          0
+lan0:41       1500 207.44.160.0       207.44.160.185            302          0
+lan0:42       1500 207.44.160.0       207.44.160.186           5414          0
+lan0:43       1500 207.44.160.0       207.44.160.187             61          0
+lan0:44       1500 207.44.160.0       207.44.160.188              0          0
+lan0:45       1500 207.44.160.0       207.44.160.189              0          0
+
+</PRE><h2><A NAME="Hosts Table (/etc/hosts)">Hosts Table (/etc/hosts)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+# @(#)hosts $Revision: 1.9.214.1 $ $Date: 96/10/08 13:20:01 $
+#
+# The form for each entry is:
+# <internet address>	<official hostname> <aliases>
+#
+# For example:
+# 192.1.2.34	hpfcrm	loghost
+#
+# See the hosts(4) manual page for more information.
+# Note: The entries cannot be preceded by a space.
+#	The format described in this file is the correct format.
+#       The original Berkeley manual page contains an error in
+#	the format description.
+#
+
+207.44.160.170	indra
+127.0.0.1	localhost	loopback
+
+</PRE><h2><A NAME="DNS generation (doit)">DNS generation (doit)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+#!/usr/bin/sh
+#
+# @(#) $Header: doit,v 1.24 98/06/06 05:21:56 cunnie Exp $
+#
+# converts hosts file into a bunch of dns domains
+#
+sudo hosts_to_named \
+\
+  -d nono.com \
+\
+  -n 207.44.160 \
+  -N 255.255.255.192 \
+  -a 15.112.192 \
+\
+  -d albion.com \
+  -d almgren.com \
+  -d bams.com \
+  -d binzen.com \
+  -d bransfield.com \
+  -d cafekati.com \
+  -d channelcaster.com \
+  -d chough.com \
+  -d cunnie.com \
+  -d dalupan.com \
+  -d doorsofcyberspace.com \
+  -d ecosecurities.com \
+  -d encapsulation.com \
+  -d etiquette.net \
+  -d free-law.com \
+  -d golfgirl.com \
+  -d gwb.com \
+  -d hymowitz.com \
+  -d isbister.org \
+  -d ivy-intl.com \
+  -d jobscenter.com \
+  -d jobscentral.com \
+  -d jonpenn.com \
+  -d kithnkin.com \
+  -d localzone.com \
+  -d magicgardener.com \
+  -d melamed.com \
+  -d moriarty.org \
+  -d netdesktop.com \
+  -d netdictionary.com \
+  -d newbiesguide.com \
+  -d ordercard.com \
+  -d petegeorge.com \
+  -d phunuviet.com \
+  -d schwartzberg.com \
+  -d sffest.com \
+  -d takamoto.com \
+  -d urbangolfgear.com \
+  -d wfeats.com \
+  -d wfs.com \
+\
+  -m 5:indra \
+\
+  -o 10800:3600:604800:86400 \
+\
+  -s indra.nono.com \
+  -s ns1.stepnet.com \
+\
+  -u cunnie.indra.nono.com \
+\
+  -w \
+\
+  -F 
+
+sudo sig_named restart
+
+</PRE><h2><A NAME="DNS boot file (/etc/named.boot)">DNS boot file (/etc/named.boot)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+;
+; @(#) $Header: named.boot,v 1.23 98/06/06 05:24:39 cunnie Exp $
+;
+;
+; type      domain          source file
+;
+
+
+directory   /var/named  ; running directory for named
+
+primary     0.0.127.IN-ADDR.ARPA    db.127.0.0
+;
+primary		kithnkin.com	db.kithnkin
+primary     albion.com     db.albion
+primary     almgren.com     db.almgren
+primary     bams.com        db.bams
+primary     binzen.com      db.binzen
+primary     bransfield.com      db.bransfield
+primary     cafekati.com    db.cafekati
+primary     channelcaster.com   db.channelcaster
+primary     chough.com        db.chough
+primary     cunnie.com      db.cunnie
+primary     dalupan.com     db.dalupan
+primary     doorsofcyberspace.com   db.doorsofcyberspace
+primary     ecosecurities.com   db.ecosecurities
+primary     encapsulation.com   db.encapsulation
+primary     etiquette.net  db.etiquette
+primary     free-law.com  db.free-law
+primary     golfgirl.com         db.golfgirl
+primary     gwb.com         db.gwb
+primary     hymowitz.com        db.hymowitz
+primary     isbister.org        db.isbister
+primary     ivy-intl.com    db.ivy-intl
+primary     jobscenter.com         db.jobscenter
+primary     jobscentral.com         db.jobscentral
+primary     jonpenn.com     db.jonpenn
+primary     localzone.com   db.localzone
+primary     magicgardener.com   db.magicgardener
+primary     melamed.com        db.melamed
+primary     moriarty.org        db.moriarty
+primary     netdesktop.com  db.netdesktop
+primary     netdictionary.com   db.netdictionary
+primary     newbiesguide.com    db.newbiesguide
+primary     nono.com        db.nono
+primary     ordercard.com        db.ordercard
+primary     petegeorge.com        db.petegeorge
+primary     phunuviet.com        db.phunuviet
+primary     schwartzberg.com        db.schwartzberg
+primary     sffest.com        db.sffest
+primary     takamoto.com        db.takamoto
+primary     urbangolfgear.com        db.urbangolfgear
+primary     wfeats.com        db.wfeats
+primary     wfs.com        db.wfs
+;
+primary     160.44.207.IN-ADDR.ARPA db.207.44.160
+;
+secondary   scissorhands.com		206.14.120.11 db.scissorhands.bak
+secondary   stepnet.com			206.14.120.11 db.stepnet.bak
+secondary   flyingshears.com		206.14.120.11 db.flyingshears.bak
+secondary   jjusa.com			206.14.120.11 db.jjusa.bak
+secondary   120.14.206.IN-ADDR.ARPA	206.14.120.11 db.206.14.120.bak
+;secondary  .           192.5.5.241 db.cache
+cache       .           db.cache
+
+</PRE><h2><A NAME="DNS client info (/etc/resolv.conf)">DNS client info (/etc/resolv.conf)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+not found on this machine (possibly not a DNS client)
+
+</PRE><h2><A NAME="DISKS & FILESYSTEMS">DISKS & FILESYSTEMS</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+
+</PRE><h2><A NAME="Disk Hardware Paths & Device-file names (ioscan -knfC disk)">Disk Hardware Paths & Device-file names (ioscan -knfC disk)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+Class     I  H/W Path   Driver      S/W State   H/W Type     Description
+=========================================================================
+disk      0  2/0/1.1.0  sdisk       CLAIMED     DEVICE       TOSHIBA CD-ROM XM-3301TA
+                       /dev/dsk/c0t1d0   /dev/rdsk/c0t1d0
+disk      1  2/0/1.4.0  sdisk       CLAIMED     DEVICE       QUANTUM FIREBALL SE4.3S
+                       /dev/dsk/c0t4d0   /dev/rdsk/c0t4d0
+disk      2  2/0/1.5.0  sdisk       CLAIMED     DEVICE       SEAGATE ST15230N
+                       /dev/dsk/c0t5d0   /dev/rdsk/c0t5d0
+disk      3  2/0/1.6.0  sdisk       CLAIMED     DEVICE       SEAGATE ST32430N
+                       /dev/dsk/c0t6d0   /dev/rdsk/c0t6d0
+
+</PRE><h2><A NAME="Physical Disk Characteristics (diskinfo)">Physical Disk Characteristics (diskinfo)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+disk                 vendor    product            size (GBytes (1,000^3 bytes))
+/dev/rdsk/c0t6d0     SEAGATE   ST32430N           2.097
+/dev/rdsk/c0t5d0     SEAGATE   ST15230N           4.193
+/dev/rdsk/c0t4d0     QUANTUM   FIREBALL SE4.3S    4.209
+/dev/rdsk/c0t1d0     TOSHIBA   CD-ROM XM-3301TA   0.382
+
+</PRE><h2><A NAME="Volume Groups (vgdisplay)">Volume Groups (vgdisplay)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+--- Volume groups ---
+VG Name                     /dev/vg00
+VG Write Access             read/write     
+VG Status                   available                 
+Max LV                      255    
+Cur LV                      7      
+Open LV                     7      
+Max PV                      16     
+Cur PV                      1      
+Act PV                      1      
+Max PE per PV               2000         
+VGDA                        2   
+PE Size (Mbytes)            4               
+Total PE                    1026    
+Alloc PE                    825     
+Free PE                     201     
+Total PVG                   0        
+Total Spare PVs             0              
+Total Spare PVs in use      0                     
+
+   --- Physical volumes ---
+   PV Name                     /dev/dsk/c0t4d0
+   PV Status                   available                
+   Total PE                    1026    
+   Free PE                     201     
+
+
+VG Name                     /dev/vg01
+VG Write Access             read/write     
+VG Status                   available                 
+Max LV                      255    
+Cur LV                      12     
+Open LV                     12     
+Max PV                      16     
+Cur PV                      2      
+Act PV                      2      
+Max PE per PV               2000         
+VGDA                        4   
+PE Size (Mbytes)            4               
+Total PE                    1533    
+Alloc PE                    1533    
+Free PE                     0       
+Total PVG                   0        
+Total Spare PVs             0              
+Total Spare PVs in use      0                     
+
+   --- Physical volumes ---
+   PV Name                     /dev/dsk/c0t5d0
+   PV Status                   available                
+   Total PE                    1022    
+   Free PE                     0       
+
+   PV Name                     /dev/dsk/c0t6d0
+   PV Status                   available                
+   Total PE                    511     
+   Free PE                     0       
+
+
+
+</PRE><h2><A NAME="Physical Volumes (pvdisplay)">Physical Volumes (pvdisplay)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+PV Name                     /dev/dsk/c0t4d0
+VG Name                     /dev/vg00
+PV Status                   available                
+Allocatable                 yes          
+VGDA                        2   
+Cur LV                      7      
+PE Size (Mbytes)            4               
+Total PE                    1026    
+Free PE                     201     
+Allocated PE                825         
+Stale PE                    0       
+IO Timeout (Seconds)        default             
+   --- Distribution of physical volume ---
+   LV Name            LE of LV  PE for LV 
+   /dev/vg00/lvol1    25        25        
+   /dev/vg00/lvol2    50        50        
+   /dev/vg00/lvol3    50        50        
+   /dev/vg00/lvol4    250       250       
+   /dev/vg00/lvol5    50        50        
+   /dev/vg00/lvol6    150       150       
+   /dev/vg00/lvol7    250       250       
+PV Name                     /dev/dsk/c0t5d0
+VG Name                     /dev/vg01
+PV Status                   available                
+Allocatable                 yes          
+VGDA                        2   
+Cur LV                      10     
+PE Size (Mbytes)            4               
+Total PE                    1022    
+Free PE                     0       
+Allocated PE                1022        
+Stale PE                    0       
+IO Timeout (Seconds)        default             
+   --- Distribution of physical volume ---
+   LV Name            LE of LV  PE for LV 
+   /dev/vg01/lvol1    25        25        
+   /dev/vg01/lvol3    50        50        
+   /dev/vg01/lvol4    175       175       
+   /dev/vg01/lvol5    89        89        
+   /dev/vg01/lvol7    25        25        
+   /dev/vg01/lvol8    150       150       
+   /dev/vg01/lvol9    50        50        
+   /dev/vg01/lvol10   200       200       
+   /dev/vg01/lvol11   50        50        
+   /dev/vg01/lvol12   208       208       
+PV Name                     /dev/dsk/c0t6d0
+VG Name                     /dev/vg01
+PV Status                   available                
+Allocatable                 yes          
+VGDA                        2   
+Cur LV                      8      
+PE Size (Mbytes)            4               
+Total PE                    511     
+Free PE                     0       
+Allocated PE                511         
+Stale PE                    0       
+IO Timeout (Seconds)        default             
+   --- Distribution of physical volume ---
+   LV Name            LE of LV  PE for LV 
+   /dev/vg01/lvol1    25        25        
+   /dev/vg01/lvol2    50        50        
+   /dev/vg01/lvol3    50        50        
+   /dev/vg01/lvol4    25        25        
+   /dev/vg01/lvol5    136       136       
+   /dev/vg01/lvol6    50        50        
+   /dev/vg01/lvol7    125       125       
+   /dev/vg01/lvol8    50        50        
+
+</PRE><h2><A NAME="Logical Volumes (lvdisplay)">Logical Volumes (lvdisplay)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+LV Name              permission status          # cnsstcy recvry   size stripe s-size bb  allocation
+/dev/vg01/lvol12     read/write available/syncd 0 MWC     parall    832 0      0      on  strict
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t5d0    208       208       
+/dev/vg01/lvol11     read/write available/syncd 0 MWC     parall    200 0      0      off strict/contiguous
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t5d0    50        50        
+/dev/vg01/lvol10     read/write available/syncd 0 MWC     parall    800 0      0      on  strict
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t5d0    200       200       
+/dev/vg01/lvol9      read/write available/syncd 0 MWC     parall    200 0      0      on  strict
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t5d0    50        50        
+/dev/vg01/lvol8      read/write available/syncd 0 MWC     parall    800 0      0      on  strict
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t5d0    150       150       
+   /dev/dsk/c0t6d0    50        50        
+/dev/vg01/lvol7      read/write available/syncd 0 MWC     parall    600 0      0      on  strict
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t5d0    25        25        
+   /dev/dsk/c0t6d0    125       125       
+/dev/vg01/lvol6      read/write available/syncd 0 MWC     parall    200 0      0      on  strict
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t6d0    50        50        
+/dev/vg01/lvol5      read/write available/syncd 0 MWC     parall    900 0      0      on  strict
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t5d0    89        89        
+   /dev/dsk/c0t6d0    136       136       
+/dev/vg01/lvol4      read/write available/syncd 0 MWC     parall    800 0      0      on  non-strict
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t5d0    175       175       
+   /dev/dsk/c0t6d0    25        25        
+/dev/vg01/lvol3      read/write available/syncd 1 MWC     parall    200 0      0      off strict/contiguous
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t5d0    50        50        
+   /dev/dsk/c0t6d0    50        50        
+/dev/vg01/lvol2      read/write available/syncd 0 MWC     parall    200 0      0      off strict/contiguous
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t6d0    50        50        
+/dev/vg01/lvol1      read/write available/syncd 1 MWC     parall    100 0      0      off strict/contiguous
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t5d0    25        25        
+   /dev/dsk/c0t6d0    25        25        
+/dev/vg00/lvol7      read/write available/syncd 0 MWC     parall   1000 0      0      on  strict
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t4d0    250       250       
+/dev/vg00/lvol6      read/write available/syncd 0 MWC     parall    600 0      0      on  strict
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t4d0    150       150       
+/dev/vg00/lvol5      read/write available/syncd 0 MWC     parall    200 0      0      on  strict
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t4d0    50        50        
+/dev/vg00/lvol4      read/write available/syncd 0 MWC     parall   1000 0      0      on  strict
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t4d0    250       250       
+/dev/vg00/lvol3      read/write available/syncd 0 MWC     parall    200 0      0      off strict/contiguous
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t4d0    50        50        
+/dev/vg00/lvol2      read/write available/syncd 0 MWC     parall    200 0      0      off strict/contiguous
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t4d0    50        50        
+/dev/vg00/lvol1      read/write available/syncd 0 MWC     parall    100 0      0      off strict/contiguous
+   PV Name            LE on PV  PE on PV  
+   /dev/dsk/c0t4d0    25        25        
+
+</PRE><h2><A NAME="Filesystem Table (/etc/fstab)">Filesystem Table (/etc/fstab)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+#
+# @(#) $Header: fstab,v 1.7 98/05/02 05:27:49 cunnie Exp $
+#
+# System /etc/fstab file.  Static information about the file systems
+# See fstab(4) and sam(1M) for further details on configuring devices.
+#
+/dev/vg00/lvol3 / vxfs delaylog 0 1
+/dev/vg01/lvol2   swap            ignore defaults 0 0  # primary swap
+/dev/vg00/lvol1 /stand hfs defaults 0 1
+/dev/vg00/lvol4 /opt vxfs delaylog 0 2
+/dev/vg00/lvol5 /tmp vxfs delaylog 0 2
+/dev/vg00/lvol6 /usr vxfs delaylog 0 2
+/dev/vg00/lvol7 /var vxfs delaylog 0 2
+#/dev/dsk/c0t2d0 /mnt/cdrom cdfs ro 0 0
+/dev/vg01/lvol3   /mnt/10.20/             vxfs   delaylog 0 1
+/dev/vg01/lvol2   swap            swap    defaults 0 0  # primary swap
+/dev/vg01/lvol2b  swap            swap    defaults 0 0  # split-mirror swap
+/dev/vg01/lvol1   /mnt/10.20/stand        hfs    defaults 0 1
+/dev/vg01/lvol4   /home                   vxfs   delaylog 0 2
+/dev/vg01/lvol5   /mnt/10.20/opt          vxfs   delaylog 0 2
+/dev/vg01/lvol6   /mnt/10.20/tmp          hfs    defaults 0 2
+/dev/vg01/lvol7   /mnt/10.20/usr          vxfs   delaylog 0 2
+/dev/vg01/lvol8   /mnt/10.20/var          hfs    defaults 0 2
+/dev/vg01/lvol9   /www                    vxfs   delaylog 0 2
+/dev/vg01/lvol10  /var/spool/sw 	  vxfs   delaylog 0 2
+#/dev/dsk/c0t0d0   /mnt/cdrom              cdfs   cdcase,ro 0 0
+#/dev/dsk/c0t1d0   /mnt/lrom               cdfs   ro 0 0
+# 4/24/98 remove this later
+/dev/vg01/lvol12  /mnt/u01                vxfs   delaylog 0 2
+# 5/2/98 fun with lofs
+
+</PRE><h2><A NAME="Filesystem Sizes (bdf -l)">Filesystem Sizes (bdf -l)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+Filesystem          kbytes    used   avail %used Mounted on
+/dev/root           204800   21674  171690   11% /
+/dev/vg00/lvol1      99669   42317   47385   47% /stand
+/dev/vg01/lvol9     204800  116301   83018   58% /www
+/dev/vg00/lvol7    1024000  501910  492599   50% /var
+/dev/vg01/lvol10    809600  457000  330611   58% /var/spool/sw
+/dev/vg00/lvol6     614400  460538  144291   76% /usr
+/dev/vg00/lvol5     204800   14169  178732    7% /tmp
+/dev/vg00/lvol4    1024000  822780  188682   81% /opt
+/dev/vg01/lvol12    851968  224223  588533   28% /mnt/u01
+/dev/vg01/lvol3     204800   19166  174230   10% /mnt/10.20
+/dev/vg01/lvol8     797845  684760   33300   95% /mnt/10.20/var
+/dev/vg01/lvol7     614400  448291  155768   74% /mnt/10.20/usr
+/dev/vg01/lvol6     199376   86864   92568   48% /mnt/10.20/tmp
+/dev/vg01/lvol1      99669   15171   74531   17% /mnt/10.20/stand
+/dev/vg01/lvol5     921600  555994  343395   62% /mnt/10.20/opt
+/dev/vg01/lvol4     819200  653609  155558   81% /home
+
+</PRE><h2><A NAME="Swap Information (swapinfo)">Swap Information (swapinfo)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+             Kb      Kb      Kb   PCT  START/      Kb
+TYPE      AVAIL    USED    FREE  USED   LIMIT RESERVE  PRI  NAME
+dev      204800    7764  197036    4%       0       -    1  /dev/vg00/lvol2
+dev      204800    7268  197532    4%       0       -    1  /dev/vg01/lvol2
+reserve       -   41888  -41888
+
+</PRE><h2><A NAME="MISCELLANEOUS">MISCELLANEOUS</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+
+</PRE><h2><A NAME="Devices (ioscan -nf)">Devices (ioscan -nf)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+Class       I  H/W Path   Driver      S/W State   H/W Type     Description
+===========================================================================
+bc          0             root        CLAIMED     BUS_NEXUS    
+graphics    0  1          graph3      CLAIMED     INTERFACE    Graphics
+ba          0  2          bus_adapter CLAIMED     BUS_NEXUS    Core I/O Adapter
+ext_bus     0  2/0/1      c720        CLAIMED     INTERFACE    Built-in SCSI
+target      0  2/0/1.1    tgt         CLAIMED     DEVICE       
+disk        0  2/0/1.1.0  sdisk       CLAIMED     DEVICE       TOSHIBA CD-ROM XM-3301TA
+                         /dev/dsk/c0t1d0   /dev/rdsk/c0t1d0
+target      1  2/0/1.3    tgt         CLAIMED     DEVICE       
+tape        0  2/0/1.3.0  stape       CLAIMED     DEVICE       HP      HP35470A
+                         /dev/rmt/0m            /dev/rmt/c0t3d0BESTn 
+                         /dev/rmt/0mb           /dev/rmt/c0t3d0BESTnb
+                         /dev/rmt/0mn           /dev/rmt/c0t3d0DDS   
+                         /dev/rmt/0mnb          /dev/rmt/c0t3d0DDSb  
+                         /dev/rmt/c0t3d0BEST    /dev/rmt/c0t3d0DDSn  
+                         /dev/rmt/c0t3d0BESTb   /dev/rmt/c0t3d0DDSnb 
+target      2  2/0/1.4    tgt         CLAIMED     DEVICE       
+disk        1  2/0/1.4.0  sdisk       CLAIMED     DEVICE       QUANTUM FIREBALL SE4.3S
+                         /dev/dsk/c0t4d0   /dev/rdsk/c0t4d0
+target      3  2/0/1.5    tgt         CLAIMED     DEVICE       
+disk        2  2/0/1.5.0  sdisk       CLAIMED     DEVICE       SEAGATE ST15230N
+                         /dev/dsk/c0t5d0   /dev/rdsk/c0t5d0
+target      4  2/0/1.6    tgt         CLAIMED     DEVICE       
+disk        3  2/0/1.6.0  sdisk       CLAIMED     DEVICE       SEAGATE ST32430N
+                         /dev/dsk/c0t6d0   /dev/rdsk/c0t6d0
+target      5  2/0/1.7    tgt         CLAIMED     DEVICE       
+ctl         0  2/0/1.7.0  sctl        CLAIMED     DEVICE       Initiator
+                         /dev/rscsi/c0t7d0
+lan         0  2/0/2      lan2        CLAIMED     INTERFACE    Built-in LAN
+                         /dev/diag/lan0  /dev/ether0     /dev/lan0     
+tty         0  2/0/4      asio0       CLAIMED     INTERFACE    Built-in RS-232C
+                         /dev/diag/mux0  /dev/mux0       /dev/tty0p0   
+ext_bus     1  2/0/6      CentIf      CLAIMED     INTERFACE    Built-in Parallel Interface
+                         /dev/c1t0d0_lp
+audio       0  2/0/8      audio       CLAIMED     INTERFACE    Built-in Audio
+                         /dev/audio       /dev/audioEL_0   /dev/audioLL_0 
+                         /dev/audioBA     /dev/audioEU     /dev/audioLU   
+                         /dev/audioBA_0   /dev/audioEU_0   /dev/audioLU_0 
+                         /dev/audioBL     /dev/audioIA     /dev/audioNA   
+                         /dev/audioBL_0   /dev/audioIA_0   /dev/audioNA_0 
+                         /dev/audioBU     /dev/audioIL     /dev/audioNL   
+                         /dev/audioBU_0   /dev/audioIL_0   /dev/audioNL_0 
+                         /dev/audioCtl    /dev/audioIU     /dev/audioNU   
+                         /dev/audioCtl_0  /dev/audioIU_0   /dev/audioNU_0 
+                         /dev/audioEA     /dev/audioLA     /dev/audio_0   
+                         /dev/audioEA_0   /dev/audioLA_0 
+                         /dev/audioEL     /dev/audioLL   
+pc          0  2/0/10     fdc         CLAIMED     INTERFACE    Built-in Floppy Drive
+floppy      0  2/0/10.1   pflop       CLAIMED     DEVICE       HP_PC_FDC_FLOPPY
+                         /dev/floppy/c0t1d0   /dev/rfloppy/c0t1d0
+ps2         0  2/0/11     ps2         CLAIMED     INTERFACE    Built-in Keyboard
+                         /dev/ps2_0     /dev/ps2kbd  
+                         /dev/ps2_1     /dev/ps2mouse
+processor   0  8          processor   CLAIMED     PROCESSOR    Processor
+memory      0  9          memory      CLAIMED     MEMORY       Memory
+
+</PRE><h2><A NAME="Software (swlist)">Software (swlist)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+# Initializing...
+# Contacting target "indra.nono.com"...
+#
+# Target:  indra.nono.com:/
+#
+
+#
+# Bundle(s):
+#
+
+  24998					B.11.00        Unsupported Tools 
+  64-bitDevLibs				B.11.00        Cross Platform Development Kit 
+  B1956DA				A.02.55        HP OpenView OmniBack II A.02.55 
+  B1957AA				A.02.55        HP OpenView OmniBack II A.02.55 Documentation 
+  B2491BA				B.11.00        MirrorDisk/UX  
+  B3394BA				B.11.00.01     HP-UX Developer's Toolkit for 11.00 
+  B3699AA_TRY				B.11.00.26     Trial HP GlancePlus/UX Pak for s700 11.00 
+  B3835BA				B.11.01        HP Process Resource Manager 
+  B3899BA				B.11.01.01     HP C/ANSI C Developer's Bundle for HP-UX 11.00 (S700) 
+  B3911DB				B.11.01.01     HP aC++ Compiler  (S700) 
+  B3919EA_AGS				B.11.00        HP-UX Unlimited-User License 
+  B3929BA				B.11.00        HP OnLineJFS (Advanced VxFS) 
+  B3947BA				B.11.01        HP Process Resource Manager 
+  B4153A				A.02.10        HP UPS Manager II 
+  B4580AA				B.11.02        HP-UX 11.00 Software Transition Kit 
+  B5139BA				A.11.02        Enterprise Cluster Master Toolkit 
+  B5455CA				C.01.13.04     HP-UX Development Kit for Java* 
+  B5456CA				C.01.13.04     HP-UX Development Kit for Java* 
+  B5457CA				C.01.13.04     HP-UX Virtual Machine for Java* 
+  B5458CA				C.01.13.04     HP-UX Virtual Machine for Java* 
+  B5725AA				B.1.45         HP-UX Installation Utilities (Ignite-UX) 
+  B6264BA				A.00.01        SRDF Disaster Recovery Toolkit 
+  HPUXEng32RT				B.11.00        English HP-UX 32-bit Runtime Environment 
+  J1607CA				B.01.02.04     Netscape Fasttrack Server 
+  J2779BA				B.11.00        Network Connection Policy Manager 
+  KernDev				B.11.00        HPUX Kernel Developers Kit 
+  MiscDiag				B.11.00.03     HPUX 11.0 Support Tools Bundle 
+  OnlineDiag				B.11.00.03.03  HPUX 11.0 Support Tools Bundle 
+  XSWGR1100				B.11.00.IB2    HP-UX Extension Pack, June 1998 
+#
+# Product(s) not contained in a Bundle:
+#
+
+  InstantInformaxn			D.03.1.1       HP Instant Information, HP-UX Browser 
+  PHCO_12577				1.0            uucp(1) - fixes multiple hop test failure 
+  PHCO_14229				1.0            Cumulative patch for prof 
+  PHCO_14230				1.0            cummulative patch for gprof. 
+  PHCO_14625				1.0            bdf(1M) patch to skip autofs file systems. 
+  PHCO_14626				1.0            mount(1M) patch to mount cachefs after nfs. 
+  PHCO_14627				1.0            mountall(1M) patch; mount cachefs after nfs. 
+  PHCO_14663				1.0            kernsymtab patch for update hang 
+  PHCO_14700				1.0            Release Notes Addendum June 1998 
+  PHCO_14704				1.0            libc cumulative patch 
+  PHCO_14705				1.0            libc cumulative header file patch 
+  PHCO_14717				1.0            libnss_files cumulative patch 
+  PHCO_14733				1.0            cumulative passwd(1) patch. 
+  PHCO_14778				1.0            cu(1) patch    
+  PHCO_14779				1.0            ct(1) patch    
+  PHCO_14780				1.0            cron(1M) and at(1) patch. 
+  PHCO_14781				1.0            lpspool subsystem cumulative patch 
+  PHCO_14809				1.0            top(1) cumulative patch 
+  PHCO_14812				1.0            acctcon1(1m) patch 
+  PHKL_14425				1.0            autox0 patch   
+  PHKL_14551				1.0            HSC:HP-PB:converter+OS hang io_query "reg..." 
+  PHKL_14703				1.0            mp serialization fix for memory drivers 
+  PHKL_14729				1.0            Increased timeouts for MO drives 
+  PHKL_14745				1.0            VxFS lock held too long/perf improvements 
+  PHKL_14747				1.0            System hang while flushing dirty buffers 
+  PHKL_14748				1.0            FS Performance; HFS, VxFS panics 
+  PHKL_14750				1.0            Fix pthread_cond_timedwait(3T) error return 
+  PHKL_14751				1.0            WSIO CDIO patch 
+  PHKL_14762				1.0            POSIX semaphore deadlock/hang 
+  PHKL_14763				1.0            JFS extended map inodes cause fsck failure 
+  PHKL_14764				1.0            DMAPI: ad_len of vx_attr_direct should be 32 
+  PHKL_14765				1.0            Fixes HFS Panic in alloccgblk 
+  PHKL_14766				1.0            Data page fault in vx_map_delayflush() 
+  PHKL_14767				1.0            HFS file system patch 
+  PHKL_14768				1.0            HSCtoPCI, HSC100BT, shared interrupt patch 
+  PHKL_14805				1.0            Scheduler;panics;PRM;KGDB;CXPerf;pthreads 
+  PHKL_14806				1.0            64 Bit HPA3519A Graphics Patch 
+  PHKL_14807				1.0            scsi3 cumulative patch 
+  PHNE_14370				1.0            LAN product cumulative patch 
+  PHNE_14706				1.0            Cumulative streams patch 
+  PHNE_14746				1.0            ONC/NFS Patch  
+  PHNE_14800				1.0            NFS Kernel Performance Patch 
+  PHSS_14577				1.0            HP aC++ runtime library components (A.03.10) 
+  PHSS_14578				1.0            HP C++ core library components (A.12.10) 
+  PHSS_14579				1.0            Assembler patch. 
+  PHSS_14580				1.0            ld(1) and linker tools cumulative patch 
+  PHSS_14581				1.0            libm patch     
+  PHSS_14582				1.0            milli.a patch  
+  PHSS_14583				1.0            LIBCL patch    
+  PHSS_14652				1.0            Fibre Channel Mass Storage Driver Patch 
+  PHSS_14726				1.0            Man pages for memory windows. 
+  PHSS_14826				1.0            Update man page for gang scheduling 
+  emacs					19.34          emacs          
+
+</PRE><h2><A NAME="System Console Messages (dmesg)">System Console Messages (dmesg)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+
+Jun 26 16:25
+WARNING: Kernel symbol table verification failed
+NOTICE: nfs3_link(): File system was registered at index 4.
+1 graph3
+2 bus_adapter
+2/0/1 c720
+2/0/1.1 tgt
+2/0/1.1.0 sdisk
+2/0/1.3 tgt
+2/0/1.3.0 stape
+2/0/1.4 tgt
+2/0/1.4.0 sdisk
+2/0/1.5 tgt
+2/0/1.5.0 sdisk
+2/0/1.6 tgt
+2/0/1.6.0 sdisk
+2/0/1.7 tgt
+2/0/1.7.0 sctl
+2/0/2 lan2
+2/0/4 asio0
+2/0/6 CentIf
+2/0/8 audio
+2/0/10 fdc
+2/0/10.1 pflop
+2/0/11 ps2
+8 processor
+9 memory
+
+    System Console is on the ITE
+Logical volume 64, 0x3 configured as ROOT
+Logical volume 64, 0x2 configured as SWAP
+Logical volume 64, 0x2 configured as DUMP
+    Swap device table:  (start & size given in 512-byte blocks)
+        entry 0 - major is 64, minor is 0x2; start = 0, size = 409600
+    Dump device table:  (start & size given in 1-Kbyte blocks)
+        entry 0 - major is 31, minor is 0x4000; start = 105312, size = 204800
+Starting the STREAMS daemons-phase 1
+Create STCP device files
+    B2352B/9245XB HP-UX (B.11.00) #1: Thu Nov  6 01:58:21 PST 1997
+
+Memory Information:
+    physical page size = 4096 bytes, logical page size = 4096 bytes
+    Physical: 81920 Kbytes, lockable: 37304 Kbytes, available: 53376 Kbytes
+
+WARNING: modpath: DLKM is not initialized
+WARNING: modadm: DLKM is not initialized
+WARNING: modadm: DLKM is not initialized
+WARNING: modadm: DLKM is not initialized
+WARNING: modadm: DLKM is not initialized
+WARNING: modpath: DLKM is not initialized
+WARNING: modadm: DLKM is not initialized
+WARNING: modpath: DLKM is not initialized
+
+</PRE><h2><A NAME="Kernel Parameters (/stand/system)">Kernel Parameters (/stand/system)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+***************************************
+* $Source: /stand/RCS/system,v $
+* $Revision: 1.1 $	$Author: root $
+* $State: Exp $   	$Locker: root $
+* $Date: 98/06/20 21:28:06 $
+*
+***************************************
+* Additional drivers required in every machine-type to create a complete
+* system file during cold install.  This list is every driver that the
+* master.d/ files do not force on the system or is not identifiable by
+* ioscan.
+* Other CPU-type specific files can exist for their special cases.
+* see create_sysfile (1m).
+***************************************
+*
+* Drivers/Subsystems
+graph3
+c720
+sdisk
+stape
+sctl
+hil
+asio0
+CentIf
+audio
+eisa
+cdfs
+nfs_core
+nfs_client
+nfs_server
+lan2
+dlpi
+inet
+uipc
+tun
+telm
+tels
+netdiag1
+nms
+fcgsc_lan
+fc_arp
+vxbase
+lvm
+lv
+hpstreams
+clone
+strlog
+sad
+echo
+sc
+timod
+tirdwr
+pipedev
+pipemod
+ffs
+ldterm
+ptem
+pts
+ptm
+pckt
+token_arp
+nfsm
+fcT1
+fcp
+diag1
+diag2
+dmem
+dev_config
+vxadv
+prm
+*
+dump lvol
+*
+STRMSGSZ		65535
+default_disk_ir		1
+maxdsiz			0X50000000
+maxssiz			0X20000000
+maxuprc			512
+maxusers		256
+nstrpty			60
+
+</PRE><h2><A NAME="Interprocess Communications (ipcs)">Interprocess Communications (ipcs)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+IPC status from /dev/kmem as of Fri Jun 26 16:25:57 1998
+T      ID     KEY        MODE        OWNER     GROUP
+Message Queues:
+q       0 0x3c180464 -Rrw--w--w-      root      root
+q       1 0x3e180464 --rw-r--r--      root      root
+Shared Memory:
+m       0 0x2f140002 --rw-------      root       sys
+m       1 0x41180562 --rw-rw-rw-      root      root
+m       2 0x4e0c0002 --rw-rw-rw-      root      root
+m       3 0x411c150c --rw-rw-rw-      root      root
+m       4 0x00000000 --rw-------      root       sys
+m    6661 0x43183ad3 --rw-rw-rw-    daemon     other
+m    9734 0x00000000 D-rw-------      http      http
+Semaphores:
+s       0 0x2f140002 --ra-ra-ra-      root       sys
+s       1 0x41180562 --ra-ra-ra-      root      root
+s       2 0x4e0c0002 --ra-ra-ra-      root      root
+s       3 0x411c150c --ra-ra-ra-      root      root
+s       4 0x01090522 --ra-r--r--      root      root
+s       5 0x611c152d --ra-ra-ra-      root      root
+s       6 0x731c152d --ra-ra-ra-      root      root
+s       7 0x701c152d --ra-ra-ra-      root      root
+s       8 0x691c152d --ra-ra-ra-      root      root
+s       9 0x751c152d --ra-ra-ra-      root      root
+s      10 0x631c152d --ra-ra-ra-      root      root
+s      11 0x641c152d --ra-ra-ra-      root      root
+s      12 0x661c152d --ra-ra-ra-      root      root
+s      13 0x6c1c152d --ra-ra-ra-      root      root
+s    2936 0x4c183ad3 --ra-r--r--    daemon     other
+
+</PRE><h2><A NAME="Users (/etc/passwd)">Users (/etc/passwd)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+root:*:0:3:Neil and Brian,,,:/root:/sbin/sh
+daemon:*:1:5::/:/sbin/sh
+bin:*:2:2::/usr/bin:/sbin/sh
+sys:*:3:3::/:
+adm:*:4:4::/var/adm:/sbin/sh
+uucp:*:5:3::/var/spool/uucppublic:/usr/lbin/uucp/uucico
+lp:*:9:7::/var/spool/lp:/sbin/sh
+nuucp:*:11:11::/var/spool/uucppublic:/usr/lbin/uucp/uucico
+hpdb:*:27:1:ALLBASE:/:/sbin/sh
+cunnie:*:2000:100:Brian Cunnie,1961 Sutter,(415) 882-6920,(415) 922-3066:/home/cunnie:/usr/bin/sh
+nbs:*:2001:100:Neil Sherman,,,415-753-0557:/home/nbs:/usr/bin/csh
+ping:*:2002:100:Ping Mai,,,:/home/ping:/usr/bin/ksh
+brendan:*:2003:1003:Brendan Cunnie,,,:/home/brendan:/usr/bin/sh
+jonpenn:*:2004:20:Jonathan Penn,,,415-771-1196:/home/jonpenn:/usr/bin/sh
+chris:*:2005:20:chris chough,,,415 922-3066:/home/chris:/usr/bin/sh
+http:*:2006:1001:brian and neil,,,415 922-3066:/home/http:/usr/bin/sh
+nkulshre:*:2007:20:Nitin Kulshrestha,,415-432-2949,:/home/nkulshre:/usr/bin/sh
+pladson:*:2008:20:Bill Pladson,,,(415) 573-7817:/home/pladson:/usr/bin/sh
+rocky:*:2009:20:Rocky Sebastian,,,415.775.7625:/home/rocky:/usr/bin/sh
+sriram:*:2010:20:Sriram,,,668.7885:/home/sriram:/usr/bin/csh
+gil:*:2011:20:Gil Estanislao,,432.3683,510.793.8540:/home/gil:/usr/bin/sh
+alok:*:2012:20:Alok Bhanot,,415 432 2378,415 737 5929:/home/alok:/usr/bin/sh
+lvv:*:2013:20:Leonid Volnitsky,San Mateo,415-4327306,408-2462273:/home/lvv:/usr/bin/sh
+nichols:*:2014:1004:Todd Nichols,San Francisco,415 882-6819,408 985-8715:/home/nichols:/usr/bin/sh
+lockwood:*:2015:20:Richard Lockwood,,415-432-3527,510-657-5623:/home/lockwood:/usr/bin/sh
+mwright:*:2016:20:Mitch Wright,,(415) 432-2081,:/home/mwright:/usr/bin/sh
+bwu:*:2017:20:Ben Wu,3000 Clearview Wy,415-432-2718,:/home/bwu:/usr/bin/sh
+maxb:*:2018:20:Max Bernstein,,,415 691-9475:/home/maxb:/usr/bin/sh
+rob:*:2019:20:g/M:/home/rob:/usr/bin/sh
+barkas:*:2020:20:Sotos Barkas,,(415) 432-4178,(408) 358-7381:/home/barkas:/usr/bin/sh
+susan:*:2021:20:The lovely Susan Freed,,(516) 625-2366,:/home/susan:/usr/bin/sh
+ettelson:*:2022:20:Andrew Ettelson,1945 California St.,,:/home/ettelson:/usr/bin/sh
+jlittle:*:2023:100:Stanford Dude:/home/jlittle:/usr/bin/csh
+gabor:*:2024:20:Gabor Kincses,,(608) 836-4989,:/home/gabor:/usr/bin/sh
+elbers:*:2025:20:Ed Elbers:/home/elbers:/usr/bin/sh
+nator:*:2026:20:Rocky Nator:/home/nator:/usr/bin/sh
+srikant:*:101:20:BS Srikant:/home/srikant:/usr/bin/sh
+shane:*:2027:20:shane noh,,,:/home/shane:/usr/bin/sh
+ftp:*:500:1:Anonymous FTP user:/home/ftp:/usr/bin/false
+harmon:*:2028:20:Jon Harmon:/home/harmon:/usr/bin/sh
+rgarcia:*:2029:100:Ruben J. Garcia,,415 241-3429,:/home/rgarcia:/usr/bin/sh
+danst01:*:2030:20:Stephen J. Danseglio,Mobile,212-350-6842,516-623-6508:/home/danst01:/usr/bin/sh
+albion:*:2031:1002:Seth Ross,,415 752-7666,:/home/albion:/usr/bin/csh
+marc:*:2222:20:Marc Almgren,San Diego,(714) 758-5592,:/home/marc:/usr/bin/sh
+t8:*:2032:20:QfE:/home/t8:/usr/bin/sh
+ed:*:2033:20:Ed Thomson,,301 714-5309,301 682-4880:/home/ed:/usr/bin/csh
+michael:*:2034:1002:Michael Lehman,,(413) 586-7494,,:/home/michael:/sbin/sh
+ckelly:*:2035:20:yV2:/home/ckelly:/sbin/sh
+colin:*:2036:20:HiY:/home/colin:/sbin/sh
+binzen:*:2037:20:Buzz Binzen,,(914) 723-8735,,:/home/binzen:/sbin/sh
+predo:*:2038:20:dRo:/home/predo:/sbin/sh
+merrill:*:2040:100:Merrill Wettasinghe,,(415) 882-6830,(415) 923-1930,:/home/merrill:/sbin/sh
+fax:*:2039:2039:,,,:/opt/fax:/bin/sh
+faxemd:*:2041:2039:,,,:/users/faxemd:/bin/sh
+ramon:*:2009:100:Ramon Sebastian,,(415) 359-3825,,:/home/ramon:/sbin/sh
+bryan:*:2042:100:Bryan Erickson,,(818) 775-2386,,:/home/bryan:/sbin/sh
+astein:*:2043:20:Art Stein,,(818) 775-2374,,:/home/astein:/sbin/sh
+lynn:*:2044:20:Lynn Forcier,,(818) 775-4080,,:/home/lynn:/sbin/sh
+aajpeter:*:2045:20:Aaron J. Peterson,,,:/home/aajpeter:/sbin/sh
+test:*:2047:20:Test Account,,,:/home/test:/usr/local/bin/menu
+dougs:*:2046:20:Douglas Strange,,(201) 599-5217,:/home/dougs:/sbin/sh
+rkmossm:*:2048:20:Sir Richard Mossman,,(510) 754-6032,:/home/rkmossm:/sbin/sh
+rlemmons:*:2049:20:Robert Lemmons,,(415) 924-5529,:/home/rlemmons:/sbin/sh
+filip:*:2050:20:Filip Jach,,(510) 932-6504,:/home/filip:/sbin/sh
+skoog:*:2051:20:Jim Skoog,,(415) 222-4906,:/home/skoog:/sbin/sh
+mdstuart:*:2052:20:Marc Stuart,,(909) 621-9965,:/home/mdstuart:/sbin/sh
+adam:*:2053:20:Adam Singer,,(415) 396-3816,:/home/adam:/sbin/sh
+billkapp:*:2054:20:Bill Kapp,,(415) 282-kapp,:/home/billkapp:/sbin/sh
+jcunnie:*:2055:20:James Cunnie,,(201) 635-4333,:/home/jcunnie:/sbin/sh
+pipes:*:2056:20:Pipes Yu,,(415) 477-6052,:/home/pipes:/sbin/sh
+henry:*:2057:20:Henry Zhu,,(415) 477-6172,:/home/henry:/sbin/sh
+wil:*:2058:20:William Cheng,,(718) 248-2201,(718) 457-5778:/home/wil:/sbin/sh
+cafekati:*:2059:20:Kirk and Tina,,(415) 775-7313,:/home/cafekati:/sbin/sh
+abby:*:2060:20:Abby Hossein,,(714) 758-5886,:/home/abby:/sbin/sh
+jayi:*:2061:20:Jay Isbister,,(212) 581-5050,(914) 834-6328:/home/jay:/sbin/sh
+wendy:*:2062:20:Wendy Isbister,,(212) 759-4580,(914) 834-6328:/home/wendy:/sbin/sh
+greg:*:2063:20:Greg Stephens,,(209) 545-5000,:/home/greg:/sbin/sh
+jayb:*:2064:20:jay bransfield,,(415) 882-6969,:/home/jayb:/sbin/sh
+mehdi:*:2065:1003:Mehdi Daoudi,,,(212) 532-9587:/home/mehdi:/sbin/sh
+tftp:*:510:1:Trivial FTP user:/home/tftpdir:/usr/bin/false
+pgeorge:*:2067:20:Pete George,,,(415) 775-7547:/home/pgeorge:/sbin/sh
+mtsuji:*:2068:100:Mark Tsuji,,(818) 703-2280,(818) 991-5526:/home/mtsuji:/sbin/sh
+portearr:*:2069:100:Porte Arriere,,(415) 882-6920,(415) 922-3066:/home/portearr:/sbin/sh
+bang:*:2070:20:Bang Le,,(818) 610-4625,(818) 810-1257:/home/bang:/sbin/sh
+cwasson:*:2071:20:Carl Wasson,,(415) 522-4583,(818) 810-1251:/home/cwasson:/sbin/sh
+maureen:*:2072:20:Maureen Cunnie,,,(415) 673-9095:/home/maureen:/sbin/sh
+bill:*:2073:20:Bill Moriarty,,,(215) 222-3835:/home/bill:/sbin/sh
+hymowitz:*:2074:20:Jeff Hymowitz,,,(201) 974-2431:/home/hymowitz:/sbin/sh
+takamoto:*:2075:20:Bryan Takamoto,,,(415) 788-3519:/home/takamoto:/sbin/sh
+melamed:*:2076:20:Paul Melamed,,,(914) 833-5126:/home/melamed:/sbin/sh
+blam:*:2077:20:Jay Minn,,(415) 351-blam,:/home/blam:/sbin/sh
+ggallo:*:2078:20:Gabrielle Gallo,,,(415) 922-3066:/home/ggallo:/sbin/sh
+hansm:*:2079:20:Hans P. Mewes,,,(732) 873-5405:/home/hansm:/sbin/sh
+jtowry:*:2080:20:John Towry,,,(214) 860-6423:/home/jtowry:/sbin/sh
+dxp:*:2081:20:Dan Passamaneck,,,415 fun-line:/home/dxp:/sbin/sh
+ajr:*:2082:20:Andy Ross,,,415 387-9448:/home/ajr:/sbin/sh
+tfok:*:2083:20:Thomas Fok,,818 703-2850,:/home/tfok:/sbin/sh
+craig:*:2084:20:Craig Tanner,,,(510) 893-1640:/home/craig:/sbin/sh
+wfeats:*:2085:20:Terry Liu,,(650) 236-2838,(650) 967-5825:/home/wfeats:/sbin/sh
+kelly:*:2086:20:Kelly Chadwick,,,(415) fun-line:/home/kelly:/sbin/sh
+jbryan:*:2087:20:John Bryan,,(305) 376-3020,:/home/jbryan:/sbin/sh
+hirsch:*:2088:1004:Bernie Hirsch,,699-4197,:/home/hirsch:/sbin/sh
+singkoo:*:2089:20:Sing Koo,,(415) 222-4892,:/home/singkoo:/sbin/sh
+lrosen:*:2090:20:Larry Rosen,,(650) 366-3457,:/home/lrosen:/sbin/sh
+showalt:*:2091:20:Scott Showalter,,(309) 672-7333,:/home/showalt:/sbin/sh
+pdoubet:*:2092:20:Phil Doubet,,(309) 672-7632,:/home/pdoubet:/sbin/sh
+adams:*:2093:20:Cousin Harry Adams,,,(650) 368-7808:/home/adams:/sbin/sh
+einschla:*:2094:20:Michael Einschlag,,,(650) 949-5766:/home/einschla:/sbin/sh
+almartin:*:2095:20:Albert Martin,,(650) 342-6315:/home/almartin:/sbin/sh
+neecha:*:2096:20:Arnold Thian-Ngern,,(415) 922-9419,:/home/neecha:/sbin/sh
+mnair:*:2097:20:Manoj Nair,,(415) 330-5734,:/home/mnair:/sbin/sh
+lasausse:*:2098:20:Arnaud Lasausse,,,33 4 42 87 06 49:/home/lasausse:/sbin/sh
+dlvision:*:2099:20:David Walford,,(650) 933-6451,(408) 297-1969:/home/dlvision:/sbin/sh
+cfischer:*:2100:20:Christian Fischer,,(415) 882-6970,:/home/cfischer:/sbin/sh
+pate:*:2101:20:Bill Pate,,(415) 882-6896,:/home/pate:/sbin/sh
+
+</PRE><h2><A NAME="Groups (/etc/group)">Groups (/etc/group)</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+root::0:root
+other::1:root,hpdb,ftp,tftp
+bin::2:root,bin
+sys::3:root,uucp
+adm::4:root,adm
+daemon::5:root,daemon
+mail::6:root
+lp::7:root,lp
+tty::10:
+nuucp::11:nuucp
+users::20:root,brendan,jonpenn,chris,http,nkulshre,pladson,rocky,sriram,gil,alok,lvv,nichols,lockwood,mwright,bwu,maxb,rob,barkas,susan,ettelson,gabor,elbers,nator,http,srikant,shane,harmon,rgarcia,danst01,albion,marc,t8,ed,michael,ckelly,colin,binzen,predo,cunnie,astein,lynn,aajpeter,dougs,test,rkmossm,rlemmons,filip,skoog,mdstuart,adam,billkapp,jcunnie,pipes,henry,wil,cafekati,abby,jayi,wendy,greg,jayb,mehdi,pgeorge,bang,cwasson,maureen,bill,hymowitz,takamoto,melamed,blam,ggallo,hansm,jtowry,dxp,ajr,tfok,craig,wfeats,kelly,jbryan,hirsch,singkoo,lrosen,showalt,pdoubet,adams,einschla,almartin,neecha,mnair,lasausse,dlvision,cfischer,pate
+staff::100:root,cunnie,nbs,ping,jlittle,http,rgarcia,merrill,ramon,bryan,mtsuji,portearr
+nogroup:*:65534:nobody
+http::1001:http,rgarcia,michael,albion,cunnie,nichols,jayb,brendan,mehdi,marc,dlvision
+albion::1002:albion,michael,http
+jobs::1003:brendan,mehdi,http
+wf::1004:cunnie,nichols,hirsch
+freelaw::1005:lrosen,almartin,einschla,adams,dlvision
+fax:*:2039:fax,faxemd
+
+</PRE><h2><A NAME="About this documentation">About this documentation</A></h2>
+
+<I>(Return to <A HREF=#top>top</A>)<BR></I><PRE>
+</PRE><P>This documentation was generated automatically via
+a program which puts this information into HTML form.
+The program resides on indra.nono.com, in the directory
+/usr/local/bin.  It is called 'my-docmaker'
+It must be run as root on the machine for which
+you want output.  The output must be re-directed to
+a file (e.g. 'my-docmaker > /tmp/indra.html').  There
+are also two other programs (my-lvdisplay and my-diskinfo)
+which my-docmaker calls; these programs also need to reside
+on the same machine.<PRE>
+</PRE><P>
+<HR>
+<FONT SIZE=-1>
+<I>
+
+Copyright &copy; 1998, nono
+
+<P>
+</BODY></HTML>
