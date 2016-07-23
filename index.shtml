@@ -22,11 +22,12 @@
       <tr>
         <td valign="top">
           <div class="nono_margin">
+            <a class="twitter-timeline" href="https://twitter.com/nono_io">nono.io tweets</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             <!-- table for Nono News -->
             <!-- table for black borders -->
             <!-- table for white cells -->
 
-	    <p><b>Deutschland &Uuml;ber Alles 5/9/2014</b> Nono.com is now
+            <p><b>Deutschland &Uuml;ber Alles 5/9/2014</b> Nono.com is now
             hosted in Germany by <a href="http://www.hetzner.de/en/">
             Hetzner</a>, now on FreeBSD 9.1 and nginx.</p>
 
