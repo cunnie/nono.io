@@ -75,6 +75,16 @@
                 </tr>
 
                 <tr>
+                  <th>AMD GX-412TC 1 GHz quad-core Jaguar</th>
+
+                  <td>FreeBSD 11.1 64-bit</td>
+
+                  <td style="text-align: right">104.2</td>
+
+                  <td style="text-align: right">13.1</td>
+                </tr>
+
+                <tr>
                   <th>Intel Core i5 2.5 GHz</th>
 
                   <td>Mac OS X 10.7.3</td>
