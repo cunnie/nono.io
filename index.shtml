@@ -1,582 +1,313 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta name="generator" content=
-    "HTML Tidy for Linux (vers 14 June 2007), see www.w3.org" />
-
-    <title>nono.io</title>
-    <link href="/persistent-style.css" rel="stylesheet" type=
-    "text/css" />
-  </head>
-
-  <body>
-    <table border="0" cellpadding="0" cellspacing="0" width="100%"
-    summary="cool looks">
-      <tr>
-        <td valign="top">
-        <!--#include virtual="/menubar.php" --></td>
-      </tr>
-
-      <tr>
-        <td valign="top">
-          <div class="nono_margin">
-            <a class="twitter-timeline" href="https://twitter.com/nono_io">nono.io tweets</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <!-- table for Nono News -->
-            <!-- table for black borders -->
-            <!-- table for white cells -->
-
-            <p><b>Deutschland &Uuml;ber Alles 5/9/2014</b> Nono.com is now
-            hosted in Germany by <a href="http://www.hetzner.de/en/">
-            Hetzner</a>, now on FreeBSD 9.1 and nginx.</p>
-
-            <p><b>Speed Tests 3/21/12</b> Quick comparison using
-            "time ssh-keygen -T moduli-1024 -f
-            moduli-1024.candidates" with identical candidate files.
-            Note that ssh-keygen is single-threaded, so multiple
-            cores don't help. Also, there may be slight differences
-            related to compilers (OS X's llvm vs. FreeBSD's gcc)
-            &amp; architectures (32-bit vs. 64-bit):</p>
-
-            <div style="margin-left: 2em;">
-              <table summary="CPU speeds" class="simple_table"
-              style="td {text-align: right}">
-                <col width="180" />
-
-                <tr>
-                  <th>CPU</th>
-
-                  <th>OS</th>
-
-                  <th>Time</th>
-
-                  <th>Speed (relative to Geode)</th>
-                </tr>
-
-                <tr>
-                  <th>AMD Geode 500MHz</th>
-
-                  <td>FreeBSD 7.2 32-bit</td>
-
-                  <td style="text-align: right">1364.4</td>
-
-                  <td style="text-align: right">1</td>
-                </tr>
-
-                <tr>
-                  <th>Intel Atom E6xx 1.6 Ghz</th>
-
-                  <td>FreeBSD 9 64-bit</td>
-
-                  <td style="text-align: right">399.5</td>
-
-                  <td style="text-align: right">3.4</td>
-                </tr>
-
-                <tr>
-                  <th>AMD GX-412TC 1 GHz quad-core Jaguar</th>
-
-                  <td>FreeBSD 11.1 64-bit</td>
-
-                  <td style="text-align: right">104.2</td>
-
-                  <td style="text-align: right">13.1</td>
-                </tr>
-
-                <tr>
-                  <th>Intel Core i5 2.5 GHz</th>
-
-                  <td>Mac OS X 10.7.3</td>
-
-                  <td style="text-align: right">61.4</td>
-
-                  <td style="text-align: right">22.2</td>
-                </tr>
-              </table>
-            </div>
-
-            <p><b>Mac Mini Upgrades 3/18/12</b> Upgraded my mac
-            mini to include a 2nd internal hard drive (1TB Samsung)
-            to go with the 240GB OWC SSD. The Mac Mini is now the
-            <i>Mighty</i> Mac Mini.</p>
-
-            <p><b>Fire is the Cleanser 10/16/11</b> A reinstall is
-            the ultimate cleanser for removing cruft from a system,
-            and that's what I did to my mac mini (last re-install
-            had been earlier than '07) (I'm not counting migrations
-            as clean installs&mdash;migrations usually bring the
-            cruft along with everything else).</p>
-
-            <p>I also installed Boot Camp on my MacBook Air &amp;
-            my mini&mdash;SWTOR is coming out in December, and it
-            only runs on Windows.</p>
-
-            <p><b>Webserver Migration 10/9/11</b> I finally moved
-            most of my websites (e.g. nono.com, cunnie.com,
-            brian.cunnie.com), to my new arpnetworks.com webserver.
-            I'll shut down the old FC7 Godaddy server once I move
-            the final website (https://nono.com). The Arpnetworks
-            server is 64-bit FreeBSD 8.2, and is quite the cutting
-            edge.</p>
-
-            <p><b>New printer 10/2/11</b> My old HP 2200, after ten
-            years of faithful service, could no longer duplex. So I
-            got a new printer, and it rocks! HP 1536 dnf MFP for
-            the win. It not only duplexes, but it scans &amp;
-            copies, too. And it's hella faster.</p>
-
-            <p><b>Wifi for the Building 3/6/11</b> Upgraded wifi
-            for the building. Was using WDS, but since my two
-            routers are different chipsets (Broadcom &amp;
-            Atheros), I switched to using a client-bridged
-            configuration with a VAP. A little lame, but I'll go
-            back to using WDS once I get my second router.</p>
-
-            <p><b>Another router upgrade 7/14/08</b> (Bastille
-            Day). I upgradeded my router, again. I got tired of
-            dd-wrt's shortcomings (specifically, I couldn't do a
-            tcpdump). Don't get me wrong: dd-wrt is pretty good.
-            But it's not the same as a full-blown FreeBSD 7.2
-            system running on a Soekris box with a 30GB HD. I love
-            my new router!</p>
-
-            <p><b>nono.com instead of www.nono.com 11/7/08</b> I
-            tired of domain speculators emailing me to sell my
-            domain because I wasn't using it (apparently domain
-            speculators no longer type in "www.nono.com" and
-            instead merely type "nono.com"), so I did some DNS and
-            web changes, and now my URL for nono.com is
-            http://nono.com. The change, though sounding trivial,
-            took a surprising amount of effort (e.g. I had to get
-            &amp; install new ssl certs; I had to relocate my
-            subversione'd files to use the server svn.nono.com
-            instead of nono.com (my subversion server and my web
-            server are two physically different machines)).</p>
-
-            <p><b>High Speed Home Access 8/22/08</b> I installed
-            Comcast Cable Business Internet 15Mbps, and it's
-            changing my world. It's blazingly fast. Here's how the
-            new cable Internet access compares to my old DSL
-            connection:</p>
-
-            <div style="margin-left: 2em;">
-              <table summary="dsl speeds" class="simple_table"
-              style="td {text-align: right}">
-                <col width="180" />
-
-                <tr>
-                  <th>Mb/s</th>
-
-                  <th>Download</th>
-
-                  <th>Upload</th>
-                </tr>
-
-                <tr>
-                  <th>Old (DSL)</th>
-
-                  <td style="text-align: right">2.912</td>
-
-                  <td style="text-align: right">.612</td>
-                </tr>
-
-                <tr>
-                  <th>New (Cable)</th>
-
-                  <td style="text-align: right">17.735</td>
-
-                  <td style="text-align: right">2.692</td>
-                </tr>
-
-                <tr>
-                  <th>Speed Factor</th>
-
-                  <td style="text-align: right">6.1</td>
-
-                  <td style="text-align: right">4.5</td>
-                </tr>
-              </table>
-            </div>
-
-            <p><b>Server Upgrade 8/16/08</b> I upgraded my main
-            server from FreeBSD 6.2 to FreeBSD 6.3. I was feeling
-            anxious about the recently announced DNS-exploit.</p>
-
-            <p><b>Router Upgrade 8/09/08</b> I upgraded my router.
-            I said goodbye to the old FreeBSD 4.3 handbuilt router
-            using ipf, and said hello to the new Linksys wrt54gl
-            router using dd-wrt and iptables. <i>(Note: I am not
-            convinced that iptables has a more intuitive interface
-            than ipf).</i></p>
-
-            <p><b>Move to new apartment 9/30/07</b> I moved to my
-            new apartment in San Francisco. The DSL cutover went
-            smoothly, and once again I cannot say enough good
-            things about my DSL vendor, Rawbandwidth
-            Communications.</p>
-
-            <p><b>Web site redesign 7/13/07</b> I've made major
-            changes to the website: I got rid of the jpeg banner
-            across the top, and replaced it with a tasteful image
-            from a handful of Gustave Dor&eacute; images that I
-            scanned in. Reload this page several times, and you
-            should see the image at the top change.</p>
-
-            <p>There were several things I wanted in the new
-            redesign, and I'd like to think that I achieved most of
-            them. For one, I wanted an image at the top (all classy
-            websites seem to have an image). But I didn't want an
-            image to take up too much space: A sweeping banner
-            across the top was out of the question. My solution: An
-            image that was inserted in the menubar at the top.</p>
-
-            <p>I also wanted to show off my technical prowess, so I
-            made the image change each time the web page was
-            reloaded. It wasn't too hard to do: an arrary of images
-            in a PHP script. But it's still pretty cool.</p>
-
-            <p>I also wanted a consistent color scheme. In this
-            case, black and white with shades of gray. There could
-            be improvement in this area, but don't underestimate
-            the good looks of basic black. Also, it goes well with
-            my black and white images.</p>
-
-            <p>The favicon next to the site name has been re-done.
-            It's black with a gray inside, echoing the same colors
-            as the menubar at the top of the page. It's not
-            brilliant, but I'm pleased with the result. I also
-            trimmed several obsolete pages, and updated the text on
-            the remaining ones (or, to be more specific, the
-            remaining two).</p>
-
-            <p>I also wanted to list the IP address of the person
-            that was viewing the page. This was more for my benefit
-            than anyone else's: I sometimes need to know what IP
-            address I'm coming from, and this is a very convenient
-            way to find it.</p>
-
-            <p>Whenever I undertake a re-design, I always ask
-            myself at the end, &ldquo;was it worth it?&rdquo; The
-            answer is, &ldquo;Probably not.&rdquo; The end result
-            is never quite as grand as I pictured it in my mind's
-            eye, and it always seems to take more time than I
-            anticipated. But I think there are greater forces at
-            work. I'm about to undertake a web project, and before
-            I began I felt compelled to re-design my websites. It
-            reminds me of my days at school, when before I would
-            study, I would clean my room. I suspect I did that for
-            at least two reasons, the first being a simple exercise
-            of control: I can clean my room, therefore I can study
-            for this exam. The second reason was because it's much
-            easier to study in a clean room&mdash;I was not
-            distracted by an errant sock on the floor, or the sad
-            state of my laundry, or the disorganized pile of
-            CDs.</p>
-
-            <p><b>Web site redesign 7/7/07</b> I'm going to
-            redesign (well, maybe "tweak" would be a more
-            appropriate description) the nono.com website, and, in
-            the course of my research, I would like to take a
-            moment to rant about a serious shortcoming in most
-            websites: the fixed-width problem.</p>
-
-            <p>Many websites are built to display at a fixed width.
-            They display at the fixed width (usually 800 pixels)
-            and they leave the sides of the page empty. Apparently
-            the thing to do is put some big swath of color on the
-            empty space to show that they're aware of the space,
-            but they're going to waste it anyway. This is very
-            annoying to me: I didn't shell out a lot of money for a
-            1400x1050 display only to have the following websites
-            decide that I should only be able to use, say,
-            600x1050:</p>
-
-            <ul>
-              <li><a href=
-              "http://shop.elizabetharden.com/home/index.jsp">Elizabeth
-              Arden</a>. Yes, it's nice to look at Catherine
-              Zeta-Jones-Douglas, but I don't need to look at huge
-              swaths of red on each side of the screen&mdash;why
-              don't you do something with that empty space?</li>
-
-              <li><a href=
-              "http://www.sfc.org.sg/main.html">Singapore Film
-              Commission</a></li>
-
-              <li>And the worst one of all, <a href=
-              "http://www.designinteract.com/">Design
-              Interact</a></li>
-            </ul>
-
-            <p>I have a beef with designinteract in particular.
-            They choose a new "site of the week" website every
-            week, one that's ostensibly well-designed, and yet
-            almost every one they choose has the fixed-width
-            problem. Furthermore, they seem to have a bias towards
-            flash-based website. Now let me say this: flash is
-            pretty cool, and it definitely makes it possible to
-            watch youtube videos, which makes it a necessity in my
-            book, but I find it annoying almost anyplace else. Most
-            people travel to a website to find information, not to
-            watch some thirty-second flash commercial.</p>
-
-            <p>Now let's turn to some really popular websites:
-            google, craigslist, nytimes, yahoo, youtube. Actually,
-            now that I actually look at those sites, I realize that
-            they, too, have the fixed-width problem. But at least
-            they have made the width much, much wider than some of
-            the lame sites previously mentioned. Also, they don't
-            try to force flash down your throat.</p>
-
-            <p><b>Nono.com has been shut down 6/17/07</b> I have
-            finally shut down nono.com: There are four computers
-            and one router on my couch, once mighty Internet
-            warriors, now lifeless husks designated to be sold on
-            ebay. My nineteen-inch rack, once my pride and joy,
-            will find a second life at my friend's startup. My
-            feelings are mixed about shutting down everything: on
-            one hand, it's very liberating&mdash;I don't need to
-            worry if my friends are getting their emails. On the
-            other hand, some of my identity was tied into nono.com,
-            and by shutting down everything, it feels like I'm
-            losing a part of myself. It's the right decision. I
-            still feel a little sad, though.</p>
-
-            <p><span style=
-            "background-color: #ff4; font-weight: bold">Nono.com
-            shutting down on Thursday 6/21/2007</span> And, for
-            those of you who want to purchase the domain name, it's
-            <b>not for sale</b>, so please don't ask me if you can
-            buy it.</p>
-
-            <p>Technically speaking, nono.com is not shutting down;
-            a more accurate description would be, &ldquo;On
-            Thursday 6/21/2007, nono.com will respond to DNS
-            queries for the domains it hosts with an NXDOMAIN;
-            additionally, it will no longer handle inbound email
-            for people with nono.com email addresses; said email
-            will bounce.&rdquo; Which means means that if I host
-            your domain, or if you receive email through one of my
-            servers, it will stop Thursday 6/21/2007. Email will
-            bounce, your webserver will not be found. It's been an
-            exciting eleven years, but I need to take a break for a
-            while.</p>
-
-            <p>The more obvservant among you may notice that I've
-            postponed the shutdown another two weeks. The reason is
-            that it costs more to cancel my SDSL line in the last
-            month of a 12-month contract than simply to let the
-            contract run its course (and, by the way, they're
-            charging a hefty $300/mo for the SDSL line). So we have
-            a little more breathing time.</p>
-
-            <p><b>New nameserver (ns-gd.nono.com) 5/20/07</b> I
-            have signed up for <a href=
-            "http://www.godaddy.com/">godaddy</a> virtual dedicated
-            server. I am pleased with them because they provide
-            bandwidth at a fraction of the cost of most other
-            providers (most colo facilities charge $100/Mbit
-            bandwidth. Godaddy charges $10/Mbit. Yes, that's right:
-            1/10th the cost of everyone else). I signed up for
-            10Mbits this month and will host one of the biggest
-            torrents during the Fedora 7 release (unless their
-            release date slips again). I'm also going to migrate my
-            webservers over there (but no email: too much of a
-            headache).</p>
-
-            <p><b>Cyrus-imapd &amp; saslauthd 3/11/07</b> Are now
-            up and running on my soon-to-be mailserver. I plan on
-            migrating everything over before I move to a new
-            place.</p>
-
-            <p><b>LDAP 3/4/07</b> I have finally configured an ldap
-            server (openldap 2.3.34). I have been meaning to do
-            this several years now, so to finally accomplish it is
-            quite gratifying. So far only one machine uses ldap
-            authentication (homo.nono.com), but I'm hoping to roll
-            it out to my other servers soon (tang &amp; chimp). In
-            the distant future, I'll perhaps include my mac mini as
-            well as my windows machines.</p>
-
-            <p><b>Not Found and Forbidden 2/11/07</b> I have
-            tweaked my <a href="/asdf">"Page Not Found"</a> and <a
-            href="/cgi-bin/">"Page Forbidden"</a> error pages. Not
-            Found now appropriately attributes the text of the
-            error message to Forrest L. Norvell, a man whom I've
-            never met but who is endowed with a unique mastery of
-            the English language. The Forbidden page now rotates
-            through a random sequence of messages. Also, I finally
-            got my certificates working again (i.e. <a href=
-            "https://www.nono.com">https</a> now works
-            properly).</p>
-
-            <p><b>Hacked! 1/28/07</b> My defenses were breached,
-            and an unscrupulous hacker used my compromised
-            webserver to send spam messages to 182,000 unsuspecting
-            Brazilians. I've reloaded my webserver, cleaned out the
-            infestation, and put additional safeguards in
-            place.</p>
-
-            <p><b>Disk Crash! 10/14/06:</b> Sometime in the morning
-            on Saturday 10/14/06 the 60GB Hard Drive on the
-            webserver (and secondary nameserver, and dhcp server),
-            homo.nono.com, failed. I rebuilt the server, taking the
-            opportunity to upgrade from FreeBSD 5.4 to FreeBSD 6.1,
-            Apache 2.0 to Apache 2.2. The machine was reloaded
-            10/15/06, nameservice was restored 10/18/06, and the
-            web service restored on 10/20/06. Apologies to everyone
-            affected by the outage. Email should not have been
-            affected.</p>
-
-            <p><b>Faster Speakeasy connection 6/18/06:</b> I've
-            just switched to a faster Speakeasy connection (SDSL,
-            1.2Mbps upload speed) for my server connection. This
-            entailed re-IP'ing most of my servers, so if something
-            is broken, please let me know. If I'm hosting a domain
-            for you, make sure you have set the nameservers to
-            ns0.nono.com and the new ns5.nono.com
-            (64.81.253.131).</p>
-
-            <p><b>ns0.nono.com back up 2/20/06:</b> One of my
-            nameservers, ns0.nono.com, had been down since Monday
-            2/13/06 due to a hard drive failure. Fortunately, it's
-            now back up. It took longer than expected to rebuild it
-            because it has been a very busy week and also because I
-            haven't set up a new backup system since I moved most
-            of the data to the <a href=
-            "http://www.infrant.com">infrant</a> RAID box two
-            months ago, so I had to coax the domain tables off the
-            faulty drive.</p>
-
-            <p><b>nono.com joins ntp.org pool 1/15/06:</b> I have
-            set two servers up to join the <a href=
-            "http://www.pool.ntp.org">ntp pool</a>:</p>
-
-            <ul>
-              <li><a href=
-              "http://www.pool.ntp.org/scores/64.81.253.134">tick.nono.com</a></li>
-
-              <li><a href=
-              "http://www.pool.ntp.org/scores/198.144.195.20">tock.nono.com</a></li>
-            </ul>
-
-            <p><b>https finally working 11/27/05:</b> I finally
-            managed to get <a href=
-            "https://www.nono.com">https://www.nono.com</a>
-            working. It was a fairly painful process, but the
-            breakthrough came when I ran "httpd -S" to parse my
-            virtual domains and realized that my unencrypted
-            connections were fighting with my encrypted connections
-            for the https port (443).</p>
-
-            <p><b>New Webserver 11/17/02:</b>I have moved all the
-            web nameserver, ns3.nono.com (66.93.79.206). The new
-            webserver features Apache 2.0.39 (yes, we're back on
-            Apache 2). Let me know if there are any problems.</p>
-
-            <p><b>New Nameserver 11/16/02:</b>I have inaugrated the
-            newest nameserver, ns3.nono.com (66.93.79.206). This
-            new nameserver is on the Speakeasy.Net network, and is
-            intended to replace ns2.nono.com (66.123.173.242),
-            which is on the now-deprecated pacbell network. I have
-            updated the domains <i>for which I am a technical
-            contact</i> to point to ns3 and to no longer point to
-            ns2.</p>
-
-            <p><b>Web Outage 11/05/02:</b>The web server for
-            www.nono.com and other domains hung. It appears to be a
-            problem with the firewall (which had been running for
-            48 days without reboot).</p>
-
-            <p><b>Weird Outage 8/9/02:</b> The main server,
-            nono.nono.com, hung between 4:41 and 8:39 a.m. PDT
-            (when I rebooted him). From the console I could see IO
-            errors (perhaps the ultimate irony--another bad disk).
-            Unfortunately the syslog didn't have any messages after
-            the reboot. On the brighter side, it appears no email
-            bounced (i.e. the ping-ponging problem is fixed).</p>
-
-            <p><b>Disk Crash! 8/4/02:</b> At roughly 12:41 p.m.
-            Saturday 8/3/02 the 40GB Hard Drive on my primary
-            server, nono.nono.com, failed. I rebuilt the server
-            with a new hard drive (purchased from Fry's at short
-            notice). The server was back up in service Sunday
-            8/4/02 23:41. I was able to restore nono.com with files
-            dated from 5/11/02 23:46. (almost three months old).
-            All email was bounced during the outage (technical
-            glitch; should be fixed now).</p>
-
-            <p><b>New Nono 5/13/02:</b> Nono.nono.com is the
-            primary mail, nfs, samba, and http server. It has been
-            completely rebuilt with a 40GB drive (previously 20GB;
-            was &gt; 93% full on two filesystems). Now has FreeBSD
-            4.5 (was 4.3) with the faster filesystem, Samba 2.2.2,
-            Apache 2.0.28, and more. We did suffer 14 hours of web
-            outage while I updated the apache configuration to work
-            properly under 2.0.</p>
-
-            <p><b>New Naynay 4/28/02:</b> Naynay.nono.com is the
-            primary DNS, backup mail server, and print server. It
-            has been completely rebuilt. Features include a 20GB
-            hard drive (formerly 7GB), and FreeBSD 4.5. (was 4.3)
-            and CUPS 1.1.12</p>
-
-            <p><b>Spam Filters now in place 11/16/01:</b> This has
-            been a lot of work (signing contracts with
-            mail-abuse.org, sending them money, modifying
-            nameserver configuration to change source-ip, modifying
-            firewall rules to map DNS queries to specific IPs, and
-            much much troubleshooting). Special thanks to Margie at
-            mail-abuse.org for her patience &amp; persistence.</p>
-
-            <p><b>Cleaning up this website 10/28/01.</b>The sidebar
-            links have been cleaned up--the ones pointing to
-            mozilla.org have been removed, and the remaining ones
-            point to real pages.</p>
-
-            <p><b>Server-Side Includes 10/24/01.</b>Yes, this is
-            simply a nice touch to allow consistent footers,
-            timestamps, etc...). I used the "IncludesNoExec" apache
-            directive (i.e. you can't use it to run code).</p>
-
-            <p><b>Reverse-Lookups now working for Rawbandwidth DSL
-            10/23/01.</b> They are a top-notch DSL provider and I
-            haven't regretted going with them. I'm assuming PacBell
-            is going to be a struggle.</p>
-
-            <p><b>Webalizer is up and running 10/18/01.</b> If your
-            domain is hosted here, you can go to
-            http://<i>yourdomainname</i>/webalizer to see a
-            beautiful graph of your website traffic. Webalizer
-            simply rocks. And the data is updated every night at
-            one a.m. via a cron job.</p>
-
-            <p><b>Nono.com now has inbound ftp 10/17/01.</b>This
-            time it really works. Active ftp only though (I simply
-            could not get passive ftp working through the firewall;
-            It requires something called a "reverse-proxy" to work
-            properly, and ipfilter doesn't have that for ftp yet
-            (or so it appears)).</p>
-
-            <p><b>Nono.com has moved as of 8/31/01.</b> Thanks for
-            all your patience everyone for bearing the various
-            outages with good humor. The new setup features
-            redundant DSL lines and should be much more robust.</p>
-
-            <p><b>Dial-up Service terminated 7/15/01</b>. I have
-            turned off the dialin lines on 7/15/01. End of an era
-            (four years of dialin service).</p>
-
-            <p><b>Nono.com's New Website Launched 6/30/01.</b>
-            Special thanks to a special friend at Macromedia for
-            obtaining a legitimate copy of Dreamweaver--she's a
-            good egg!</p>
+<head>
+  <meta name="generator" content="HTML Tidy for HTML5 for FreeBSD version 5.8.0" />
+  <meta charset="UTF-8">
+  <title>nono.io</title>
+  <link href="/persistent-style.css" rel="stylesheet" type="text/css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async="async"></script>
+</head>
+<body>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" summary="cool looks">
+    <tr>
+      <td valign="top">
+        <table style="border-spacing: 4px" width="100%">
+          <tr class="nono_menubar_table">
+            <td>
+              &nbsp;&nbsp;<a href="/"><b>home</b></a>&nbsp;&nbsp;&nbsp; <a href="/about.shtml">about</a>
+            </td>
+            <td style="padding:0px" width="1%"><img src="/images/noble_party.jpg" alt="Noble Party" /></td>
+            <td style="text-align:right;">Your IP: <!--# echo var="REMOTE_ADDR" -->
+             &nbsp;&nbsp;</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <div class="nono_margin">
+          <bsky-embed username="brian-cunnie.bsky.social" limit="5"></bsky-embed>
+          <!-- table for Nono News -->
+          <!-- table for black borders -->
+          <!-- table for white cells -->
+          <p><b>Deutschland Über Alles 5/9/2014</b> Nono.com is now hosted in Germany by <a href=
+          "http://www.hetzner.de/en/">Hetzner</a>, now on FreeBSD 9.1 and nginx.</p>
+          <p><b>Speed Tests 3/21/12</b> Quick comparison using "time ssh-keygen -T moduli-1024 -f
+          moduli-1024.candidates" with identical candidate files. Note that ssh-keygen is single-threaded, so multiple
+          cores don't help. Also, there may be slight differences related to compilers (OS X's llvm vs. FreeBSD's gcc)
+          &amp; architectures (32-bit vs. 64-bit):</p>
+          <div style="margin-left: 2em;">
+            <table summary="CPU speeds" class="simple_table" style="td {text-align: right}">
+              <col width="180" />
+              <tr>
+                <th>CPU</th>
+                <th>OS</th>
+                <th>Time</th>
+                <th>Speed (relative to Geode)</th>
+              </tr>
+              <tr>
+                <th>AMD Geode 500MHz</th>
+                <td>FreeBSD 7.2 32-bit</td>
+                <td style="text-align: right">1364.4</td>
+                <td style="text-align: right">1</td>
+              </tr>
+              <tr>
+                <th>Intel Atom E6xx 1.6 Ghz</th>
+                <td>FreeBSD 9 64-bit</td>
+                <td style="text-align: right">399.5</td>
+                <td style="text-align: right">3.4</td>
+              </tr>
+              <tr>
+                <th>AMD GX-412TC 1 GHz quad-core Jaguar</th>
+                <td>FreeBSD 11.1 64-bit</td>
+                <td style="text-align: right">104.2</td>
+                <td style="text-align: right">13.1</td>
+              </tr>
+              <tr>
+                <th>Intel Core i5 2.5 GHz</th>
+                <td>Mac OS X 10.7.3</td>
+                <td style="text-align: right">61.4</td>
+                <td style="text-align: right">22.2</td>
+              </tr>
+            </table>
           </div>
-        </td>
-      </tr>
-      <!--#include virtual="/footer.shtml"-->
-    </table>
-  </body>
+          <p><b>Mac Mini Upgrades 3/18/12</b> Upgraded my mac mini to include a 2nd internal hard drive (1TB Samsung)
+          to go with the 240GB OWC SSD. The Mac Mini is now the <i>Mighty</i> Mac Mini.</p>
+          <p><b>Fire is the Cleanser 10/16/11</b> A reinstall is the ultimate cleanser for removing cruft from a
+          system, and that's what I did to my mac mini (last re-install had been earlier than '07) (I'm not counting
+          migrations as clean installs—migrations usually bring the cruft along with everything else).</p>
+          <p>I also installed Boot Camp on my MacBook Air &amp; my mini—SWTOR is coming out in December, and it only
+          runs on Windows.</p>
+          <p><b>Webserver Migration 10/9/11</b> I finally moved most of my websites (e.g. nono.com, cunnie.com,
+          brian.cunnie.com), to my new arpnetworks.com webserver. I'll shut down the old FC7 Godaddy server once I move
+          the final website (https://nono.com). The Arpnetworks server is 64-bit FreeBSD 8.2, and is quite the cutting
+          edge.</p>
+          <p><b>New printer 10/2/11</b> My old HP 2200, after ten years of faithful service, could no longer duplex. So
+          I got a new printer, and it rocks! HP 1536 dnf MFP for the win. It not only duplexes, but it scans &amp;
+          copies, too. And it's hella faster.</p>
+          <p><b>Wifi for the Building 3/6/11</b> Upgraded wifi for the building. Was using WDS, but since my two
+          routers are different chipsets (Broadcom &amp; Atheros), I switched to using a client-bridged configuration
+          with a VAP. A little lame, but I'll go back to using WDS once I get my second router.</p>
+          <p><b>Another router upgrade 7/14/08</b> (Bastille Day). I upgraded my router, again. I got tired of dd-wrt's
+          shortcomings (specifically, I couldn't do a tcpdump). Don't get me wrong: dd-wrt is pretty good. But it's not
+          the same as a full-blown FreeBSD 7.2 system running on a Soekris box with a 30GB HD. I love my new
+          router!</p>
+          <p><b>nono.com instead of www.nono.com 11/7/08</b> I tired of domain speculators emailing me to sell my
+          domain because I wasn't using it (apparently domain speculators no longer type in "www.nono.com" and instead
+          merely type "nono.com"), so I did some DNS and web changes, and now my URL for nono.com is http://nono.com.
+          The change, though sounding trivial, took a surprising amount of effort (e.g. I had to get &amp; install new
+          ssl certs; I had to relocate my subversione'd files to use the server svn.nono.com instead of nono.com (my
+          subversion server and my web server are two physically different machines)).</p>
+          <p><b>High Speed Home Access 8/22/08</b> I installed Comcast Cable Business Internet 15Mbps, and it's
+          changing my world. It's blazingly fast. Here's how the new cable Internet access compares to my old DSL
+          connection:</p>
+          <div style="margin-left: 2em;">
+            <table summary="dsl speeds" class="simple_table" style="td {text-align: right}">
+              <col width="180" />
+              <tr>
+                <th>Mb/s</th>
+                <th>Download</th>
+                <th>Upload</th>
+              </tr>
+              <tr>
+                <th>Old (DSL)</th>
+                <td style="text-align: right">2.912</td>
+                <td style="text-align: right">.612</td>
+              </tr>
+              <tr>
+                <th>New (Cable)</th>
+                <td style="text-align: right">17.735</td>
+                <td style="text-align: right">2.692</td>
+              </tr>
+              <tr>
+                <th>Speed Factor</th>
+                <td style="text-align: right">6.1</td>
+                <td style="text-align: right">4.5</td>
+              </tr>
+            </table>
+          </div>
+          <p><b>Server Upgrade 8/16/08</b> I upgraded my main server from FreeBSD 6.2 to FreeBSD 6.3. I was feeling
+          anxious about the recently announced DNS-exploit.</p>
+          <p><b>Router Upgrade 8/09/08</b> I upgraded my router. I said goodbye to the old FreeBSD 4.3 handbuilt router
+          using ipf, and said hello to the new Linksys wrt54gl router using dd-wrt and iptables. <i>(Note: I am not
+          convinced that iptables has a more intuitive interface than ipf).</i></p>
+          <p><b>Move to new apartment 9/30/07</b> I moved to my new apartment in San Francisco. The DSL cutover went
+          smoothly, and once again I cannot say enough good things about my DSL vendor, Rawbandwidth
+          Communications.</p>
+          <p><b>Web site redesign 7/13/07</b> I've made major changes to the website: I got rid of the jpeg banner
+          across the top, and replaced it with a tasteful image from a handful of Gustave Doré images that I scanned
+          in. Reload this page several times, and you should see the image at the top change.</p>
+          <p>There were several things I wanted in the new redesign, and I'd like to think that I achieved most of
+          them. For one, I wanted an image at the top (all classy websites seem to have an image). But I didn't want an
+          image to take up too much space: A sweeping banner across the top was out of the question. My solution: An
+          image that was inserted in the menubar at the top.</p>
+          <p>I also wanted to show off my technical prowess, so I made the image change each time the web page was
+          reloaded. It wasn't too hard to do: an arrary of images in a PHP script. But it's still pretty cool.</p>
+          <p>I also wanted a consistent color scheme. In this case, black and white with shades of gray. There could be
+          improvement in this area, but don't underestimate the good looks of basic black. Also, it goes well with my
+          black and white images.</p>
+          <p>The favicon next to the site name has been re-done. It's black with a gray inside, echoing the same colors
+          as the menubar at the top of the page. It's not brilliant, but I'm pleased with the result. I also trimmed
+          several obsolete pages, and updated the text on the remaining ones (or, to be more specific, the remaining
+          two).</p>
+          <p>I also wanted to list the IP address of the person that was viewing the page. This was more for my benefit
+          than anyone else's: I sometimes need to know what IP address I'm coming from, and this is a very convenient
+          way to find it.</p>
+          <p>Whenever I undertake a re-design, I always ask myself at the end, “was it worth it?” The answer is,
+          “Probably not.” The end result is never quite as grand as I pictured it in my mind's eye, and it always seems
+          to take more time than I anticipated. But I think there are greater forces at work. I'm about to undertake a
+          web project, and before I began I felt compelled to re-design my websites. It reminds me of my days at
+          school, when before I would study, I would clean my room. I suspect I did that for at least two reasons, the
+          first being a simple exercise of control: I can clean my room, therefore I can study for this exam. The
+          second reason was because it's much easier to study in a clean room—I was not distracted by an errant sock on
+          the floor, or the sad state of my laundry, or the disorganized pile of CDs.</p>
+          <p><b>Web site redesign 7/7/07</b> I'm going to redesign (well, maybe "tweak" would be a more appropriate
+          description) the nono.com website, and, in the course of my research, I would like to take a moment to rant
+          about a serious shortcoming in most websites: the fixed-width problem.</p>
+          <p>Many websites are built to display at a fixed width. They display at the fixed width (usually 800 pixels)
+          and they leave the sides of the page empty. Apparently the thing to do is put some big swath of color on the
+          empty space to show that they're aware of the space, but they're going to waste it anyway. This is very
+          annoying to me: I didn't shell out a lot of money for a 1400x1050 display only to have the following websites
+          decide that I should only be able to use, say, 600x1050:</p>
+          <ul>
+            <li>
+              <a href="http://shop.elizabetharden.com/home/index.jsp">Elizabeth Arden</a>. Yes, it's nice to look at
+              Catherine Zeta-Jones-Douglas, but I don't need to look at huge swaths of red on each side of the
+              screen—why don't you do something with that empty space?
+            </li>
+            <li>
+              <a href="http://www.sfc.org.sg/main.html">Singapore Film Commission</a>
+            </li>
+            <li>And the worst one of all, <a href="http://www.designinteract.com/">Design Interact</a>
+            </li>
+          </ul>
+          <p>I have a beef with designinteract in particular. They choose a new "site of the week" website every week,
+          one that's ostensibly well-designed, and yet almost every one they choose has the fixed-width problem.
+          Furthermore, they seem to have a bias towards flash-based website. Now let me say this: flash is pretty cool,
+          and it definitely makes it possible to watch youtube videos, which makes it a necessity in my book, but I
+          find it annoying almost anyplace else. Most people travel to a website to find information, not to watch some
+          thirty-second flash commercial.</p>
+          <p>Now let's turn to some really popular websites: google, craigslist, nytimes, yahoo, youtube. Actually, now
+          that I actually look at those sites, I realize that they, too, have the fixed-width problem. But at least
+          they have made the width much, much wider than some of the lame sites previously mentioned. Also, they don't
+          try to force flash down your throat.</p>
+          <p><b>Nono.com has been shut down 6/17/07</b> I have finally shut down nono.com: There are four computers and
+          one router on my couch, once mighty Internet warriors, now lifeless husks designated to be sold on ebay. My
+          nineteen-inch rack, once my pride and joy, will find a second life at my friend's startup. My feelings are
+          mixed about shutting down everything: on one hand, it's very liberating—I don't need to worry if my friends
+          are getting their emails. On the other hand, some of my identity was tied into nono.com, and by shutting down
+          everything, it feels like I'm losing a part of myself. It's the right decision. I still feel a little sad,
+          though.</p>
+          <p><span style="background-color: #ff4; font-weight: bold">Nono.com shutting down on Thursday
+          6/21/2007</span> And, for those of you who want to purchase the domain name, it's <b>not for sale</b>, so
+          please don't ask me if you can buy it.</p>
+          <p>Technically speaking, nono.com is not shutting down; a more accurate description would be, “On Thursday
+          6/21/2007, nono.com will respond to DNS queries for the domains it hosts with an NXDOMAIN; additionally, it
+          will no longer handle inbound email for people with nono.com email addresses; said email will bounce.” Which
+          means means that if I host your domain, or if you receive email through one of my servers, it will stop
+          Thursday 6/21/2007. Email will bounce, your webserver will not be found. It's been an exciting eleven years,
+          but I need to take a break for a while.</p>
+          <p>The more obvservant among you may notice that I've postponed the shutdown another two weeks. The reason is
+          that it costs more to cancel my SDSL line in the last month of a 12-month contract than simply to let the
+          contract run its course (and, by the way, they're charging a hefty $300/mo for the SDSL line). So we have a
+          little more breathing time.</p>
+          <p><b>New nameserver (ns-gd.nono.com) 5/20/07</b> I have signed up for <a href=
+          "http://www.godaddy.com/">godaddy</a> virtual dedicated server. I am pleased with them because they provide
+          bandwidth at a fraction of the cost of most other providers (most colo facilities charge $100/Mbit bandwidth.
+          Godaddy charges $10/Mbit. Yes, that's right: 1/10th the cost of everyone else). I signed up for 10Mbits this
+          month and will host one of the biggest torrents during the Fedora 7 release (unless their release date slips
+          again). I'm also going to migrate my webservers over there (but no email: too much of a headache).</p>
+          <p><b>Cyrus-imapd &amp; saslauthd 3/11/07</b> Are now up and running on my soon-to-be mailserver. I plan on
+          migrating everything over before I move to a new place.</p>
+          <p><b>LDAP 3/4/07</b> I have finally configured an ldap server (openldap 2.3.34). I have been meaning to do
+          this several years now, so to finally accomplish it is quite gratifying. So far only one machine uses ldap
+          authentication (homo.nono.com), but I'm hoping to roll it out to my other servers soon (tang &amp; chimp). In
+          the distant future, I'll perhaps include my mac mini as well as my windows machines.</p>
+          <p><b>Not Found and Forbidden 2/11/07</b> I have tweaked my <a href="/asdf">"Page Not Found"</a> and <a href=
+          "/cgi-bin/">"Page Forbidden"</a> error pages. Not Found now appropriately attributes the text of the error
+          message to Forrest L. Norvell, a man whom I've never met but who is endowed with a unique mastery of the
+          English language. The Forbidden page now rotates through a random sequence of messages. Also, I finally got
+          my certificates working again (i.e. <a href="https://www.nono.com">https</a> now works properly).</p>
+          <p><b>Hacked! 1/28/07</b> My defenses were breached, and an unscrupulous hacker used my compromised webserver
+          to send spam messages to 182,000 unsuspecting Brazilians. I've reloaded my webserver, cleaned out the
+          infestation, and put additional safeguards in place.</p>
+          <p><b>Disk Crash! 10/14/06:</b> Sometime in the morning on Saturday 10/14/06 the 60GB Hard Drive on the
+          webserver (and secondary nameserver, and dhcp server), homo.nono.com, failed. I rebuilt the server, taking
+          the opportunity to upgrade from FreeBSD 5.4 to FreeBSD 6.1, Apache 2.0 to Apache 2.2. The machine was
+          reloaded 10/15/06, nameservice was restored 10/18/06, and the web service restored on 10/20/06. Apologies to
+          everyone affected by the outage. Email should not have been affected.</p>
+          <p><b>Faster Speakeasy connection 6/18/06:</b> I've just switched to a faster Speakeasy connection (SDSL,
+          1.2Mbps upload speed) for my server connection. This entailed re-IP'ing most of my servers, so if something
+          is broken, please let me know. If I'm hosting a domain for you, make sure you have set the nameservers to
+          ns0.nono.com and the new ns5.nono.com (64.81.253.131).</p>
+          <p><b>ns0.nono.com back up 2/20/06:</b> One of my nameservers, ns0.nono.com, had been down since Monday
+          2/13/06 due to a hard drive failure. Fortunately, it's now back up. It took longer than expected to rebuild
+          it because it has been a very busy week and also because I haven't set up a new backup system since I moved
+          most of the data to the <a href="http://www.infrant.com">infrant</a> RAID box two months ago, so I had to
+          coax the domain tables off the faulty drive.</p>
+          <p><b>nono.com joins ntp.org pool 1/15/06:</b> I have set two servers up to join the <a href=
+          "http://www.pool.ntp.org">ntp pool</a>:</p>
+          <ul>
+            <li>
+              <a href="http://www.pool.ntp.org/scores/64.81.253.134">tick.nono.com</a>
+            </li>
+            <li>
+              <a href="http://www.pool.ntp.org/scores/198.144.195.20">tock.nono.com</a>
+            </li>
+          </ul>
+          <p><b>https finally working 11/27/05:</b> I finally managed to get <a href=
+          "https://www.nono.com">https://www.nono.com</a> working. It was a fairly painful process, but the
+          breakthrough came when I ran "httpd -S" to parse my virtual domains and realized that my unencrypted
+          connections were fighting with my encrypted connections for the https port (443).</p>
+          <p><b>New Webserver 11/17/02:</b>I have moved all the web nameserver, ns3.nono.com (66.93.79.206). The new
+          webserver features Apache 2.0.39 (yes, we're back on Apache 2). Let me know if there are any problems.</p>
+          <p><b>New Nameserver 11/16/02:</b>I have inaugrated the newest nameserver, ns3.nono.com (66.93.79.206). This
+          new nameserver is on the Speakeasy.Net network, and is intended to replace ns2.nono.com (66.123.173.242),
+          which is on the now-deprecated pacbell network. I have updated the domains <i>for which I am a technical
+          contact</i> to point to ns3 and to no longer point to ns2.</p>
+          <p><b>Web Outage 11/05/02:</b>The web server for www.nono.com and other domains hung. It appears to be a
+          problem with the firewall (which had been running for 48 days without reboot).</p>
+          <p><b>Weird Outage 8/9/02:</b> The main server, nono.nono.com, hung between 4:41 and 8:39 a.m. PDT (when I
+          rebooted him). From the console I could see IO errors (perhaps the ultimate irony--another bad disk).
+          Unfortunately the syslog didn't have any messages after the reboot. On the brighter side, it appears no email
+          bounced (i.e. the ping-ponging problem is fixed).</p>
+          <p><b>Disk Crash! 8/4/02:</b> At roughly 12:41 p.m. Saturday 8/3/02 the 40GB Hard Drive on my primary server,
+          nono.nono.com, failed. I rebuilt the server with a new hard drive (purchased from Fry's at short notice). The
+          server was back up in service Sunday 8/4/02 23:41. I was able to restore nono.com with files dated from
+          5/11/02 23:46. (almost three months old). All email was bounced during the outage (technical glitch; should
+          be fixed now).</p>
+          <p><b>New Nono 5/13/02:</b> Nono.nono.com is the primary mail, nfs, samba, and http server. It has been
+          completely rebuilt with a 40GB drive (previously 20GB; was &gt; 93% full on two filesystems). Now has FreeBSD
+          4.5 (was 4.3) with the faster filesystem, Samba 2.2.2, Apache 2.0.28, and more. We did suffer 14 hours of web
+          outage while I updated the apache configuration to work properly under 2.0.</p>
+          <p><b>New Naynay 4/28/02:</b> Naynay.nono.com is the primary DNS, backup mail server, and print server. It
+          has been completely rebuilt. Features include a 20GB hard drive (formerly 7GB), and FreeBSD 4.5. (was 4.3)
+          and CUPS 1.1.12</p>
+          <p><b>Spam Filters now in place 11/16/01:</b> This has been a lot of work (signing contracts with
+          mail-abuse.org, sending them money, modifying nameserver configuration to change source-ip, modifying
+          firewall rules to map DNS queries to specific IPs, and much much troubleshooting). Special thanks to Margie
+          at mail-abuse.org for her patience &amp; persistence.</p>
+          <p><b>Cleaning up this website 10/28/01.</b>The sidebar links have been cleaned up--the ones pointing to
+          mozilla.org have been removed, and the remaining ones point to real pages.</p>
+          <p><b>Server-Side Includes 10/24/01.</b>Yes, this is simply a nice touch to allow consistent footers,
+          timestamps, etc...). I used the "IncludesNoExec" apache directive (i.e. you can't use it to run code).</p>
+          <p><b>Reverse-Lookups now working for Rawbandwidth DSL 10/23/01.</b> They are a top-notch DSL provider and I
+          haven't regretted going with them. I'm assuming PacBell is going to be a struggle.</p>
+          <p><b>Webalizer is up and running 10/18/01.</b> If your domain is hosted here, you can go to
+          http://<i>yourdomainname</i>/webalizer to see a beautiful graph of your website traffic. Webalizer simply
+          rocks. And the data is updated every night at one a.m. via a cron job.</p>
+          <p><b>Nono.com now has inbound ftp 10/17/01.</b>This time it really works. Active ftp only though (I simply
+          could not get passive ftp working through the firewall; It requires something called a "reverse-proxy" to
+          work properly, and ipfilter doesn't have that for ftp yet (or so it appears)).</p>
+          <p><b>Nono.com has moved as of 8/31/01.</b> Thanks for all your patience everyone for bearing the various
+          outages with good humor. The new setup features redundant DSL lines and should be much more robust.</p>
+          <p><b>Dial-up Service terminated 7/15/01</b>. I have turned off the dialin lines on 7/15/01. End of an era
+          (four years of dialin service).</p>
+          <p><b>Nono.com's New Website Launched 6/30/01.</b> Special thanks to a special friend at Macromedia for
+          obtaining a legitimate copy of Dreamweaver--she's a good egg!</p>
+        </div>
+      </td>
+    </tr><!--#include virtual="/footer.shtml"-->
+  </table>
+</body>
 </html>
-
