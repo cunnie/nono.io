@@ -1,108 +1,62 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta name="generator" content=
-  "HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-
-  <title>About nono.com</title>
-  <link href="persistent-style.css" rel="stylesheet" type=
-  "text/css">
+  <meta name="generator" content="HTML Tidy for HTML5 for FreeBSD version 5.8.0">
+  <meta charset="UTF-8">
+  <title>About nono.com / nono.io</title>
+  <link href="persistent-style.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-  <table summary="content" border="0" cellpadding="0" cellspacing=
-  "0" width="100%">
+  <table summary="content" border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
-      <td valign="top"><!--#include virtual="/menubar.php" --></td>
+      <td valign="top">
+        <table style="border-spacing: 4px" width="100%">
+          <tr class="nono_menubar_table">
+            <td>
+              &nbsp;&nbsp;<a href="/"><b>home</b></a>&nbsp;&nbsp;&nbsp; <a href="/about.shtml">about</a>
+            </td>
+            <td style="padding:0px" width="1%"><img src="/images/noble_party.jpg" alt="Noble Party" /></td>
+            <td style="text-align:right;">Your IP: <!--# echo var="REMOTE_ADDR" -->
+             &nbsp;&nbsp;</td>
+          </tr>
+        </table>
+      </td>
     </tr>
-
     <tr>
       <td valign="top">
         <div class="nono_margin">
-          <h1>About nono.com</h1>
-
+          <h1>About nono.com / nono.io</h1>
           <dl class="toc">
             <dt>What does nono.com do?</dt>
-
-            <dd>Nono.com is a website and a domain that I use as a
-            sandbox to test and play with. I used to host other
-            people's domains and email, and at one point I even had
-            dial-in services, but those days are long gone.</dd>
-
+            <dd>Nono.com is a website and a domain that I use as a sandbox to test and play with. I used to host other
+            people's domains and email, and at one point I even had dial-in services, but those days are long
+            gone.</dd>
             <dt>Who is behind nono.com?</dt>
-
             <dd>
               <ul>
-                <li>I (<a href="http://brian.cunnie.com">Brian
-                Cunnie</a>) do most of the work and all the
+                <li>I (<a href="http://brian.cunnie.com">Brian Cunnie</a>) do most of the work and all the
                 funding.</li>
-
-                <li>Ping Mai provides backup DNS service &amp;
-                email service for which I can't thank him enough,
-                and who convinced me to switch from qmail back to
-                sendmail.</li>
-
-                <li>Neil Sherman, who in a pinch has gone over to
-                my house to reboot the servers, was the one who
-                originally suggested the domain name
-                (nono.com).</li>
+                <li>Ping Mai provides backup DNS service &amp; email service for which I can't thank him enough, and
+                who convinced me to switch from qmail back to sendmail.</li>
+                <li>Neil Sherman, who in a pinch has gone over to my house to reboot the servers, was the one who
+                originally suggested the domain name (nono.com).</li>
               </ul>
             </dd>
-
-            <dt>I need my domain hosted&mdash;where should I
-            go?</dt>
-
-            <dd>
-              <p>My friend Joe Dao recommends <a href=
-              "http://www.midphase.com">midphase.com</a>.</p>
-
-              <p>Do <b>not</b> use name2host.com&mdash;two of my
-              friends used it and their sites were down for two
-              weeks once. And they don't have a phone number for
-              support so it's difficult to get in touch with them
-              when there's a problem. I'm not going to give you a
-              hyperlink because they're so bad. On the bright side,
-              they're 1/3 price of the next cheapest vendor.</p>
-
-              <p>Another friend, Marc Almgren, uses <a href=
-              "http://www.csoft.net">csoft</a>. He says, "They'll
-              do what I want for $10/mo. with no setup charges or
-              anything."</p>
-            </dd>
-
             <dt>When did nono.com go into operation?</dt>
-
             <dd>June 21, 1996.</dd>
-
-            <dt>Why "nono.com"? What were you looking for in the
-            name?</dt>
-
+            <dt>Why "nono.com"? What were you looking for in the name?</dt>
             <dd>
               I was looking for the following in the domain name:
-
               <ul>
-                <li>It had to be a name that was <b>not</b> already
-                registered.</li>
-
-                <li>It had to be as short as possible (people hate
-                to type in really long domain names). All the
-                two-letter and most of the three-letter
-                combinations had been taken long ago (e.g., even
-                microsoft couldn't get "ms.com"), so I was willing
-                to settle for a good four-letter name. But I
-                wouldn't take anything longer than five
-                letters.</li>
-
-                <li>It had to be easy to remember. Something like
-                "rxpq.com" was completely unacceptable.</li>
-
-                <li>It had to be easy to spell over the phone,
-                preferably so understandable that spelling would be
-                unnecessary. "b4icu.com" was bad because the
-                spelling could be mis-interpreted in so many ways
-                (e.g. "beforeiseeyou.com" or "b4iseeu.com" or
-                "beforeicu.com").</li>
+                <li>It had to be a name that was <b>not</b> already registered.</li>
+                <li>It had to be as short as possible (people hate to type in really long domain names). All the
+                two-letter and most of the three-letter combinations had been taken long ago (e.g., even microsoft
+                couldn't get "ms.com"), so I was willing to settle for a good four-letter name. But I wouldn't take
+                anything longer than five letters.</li>
+                <li>It had to be easy to remember. Something like "rxpq.com" was completely unacceptable.</li>
+                <li>It had to be easy to spell over the phone, preferably so understandable that spelling would be
+                unnecessary. "b4icu.com" was bad because the spelling could be mis-interpreted in so many ways (e.g.
+                "beforeiseeyou.com" or "b4iseeu.com" or "beforeicu.com").</li>
               </ul>
             </dd>
           </dl>
