@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta name="generator" content="HTML Tidy for HTML5 for FreeBSD version 5.8.0">
-  <meta charset="UTF-8">
+  <meta name="generator" content="HTML Tidy for HTML5 for FreeBSD version 5.8.0" />
+  <meta charset="UTF-8" />
   <title>nono.com / nono.io</title>
-  <link href="persistent-style.css" rel="stylesheet" type="text/css">
+  <link href="persistent-style.css" rel="stylesheet" type="text/css" />
   <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async="async"></script>
 </head>
 <body>
@@ -17,8 +17,10 @@
               &nbsp;&nbsp;<a href="/"><b>home</b></a>&nbsp;&nbsp;&nbsp; <a href="/about.shtml">about</a>
             </td>
             <td style="padding:0px" width="1%"><img src="/images/noble_party.jpg" alt="Noble Party" /></td>
-            <td style="text-align:right;">Your IP: <!--# echo var="REMOTE_ADDR" -->
-             &nbsp;&nbsp;</td>
+            <td style="text-align:right;">
+              <p><span id="ipv4"></span></p>
+              <p><span id="ipv6"></span></p>
+            </td>
           </tr>
         </table>
       </td>
@@ -309,5 +311,6 @@
       </td>
     </tr><!--#include virtual="/footer.shtml"-->
   </table>
+  <script src="https://nono.io/js/remote_addr.js"></script>
 </body>
 </html>
