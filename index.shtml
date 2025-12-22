@@ -17,10 +17,8 @@
               &nbsp;&nbsp;<a href="/"><b>home</b></a>&nbsp;&nbsp;&nbsp; <a href="/about.shtml">about</a>
             </td>
             <td style="padding:0px" width="1%"><img src="/images/noble_party.jpg" alt="Noble Party" /></td>
-            <td style="text-align:right;">
-              <p><span id="ipv4"></span></p>
-              <p><span id="ipv6"></span></p>
-            </td>
+            <td style="text-align:right;"><span id="ipv4"></span><br />
+            <span id="ipv6"></span></td>
           </tr>
         </table>
       </td>
@@ -309,7 +307,7 @@
           obtaining a legitimate copy of Dreamweaver--she's a good egg!</p>
         </div>
       </td>
-    </tr><!--#include virtual="/footer.shtml"-->
+    </tr>
   </table>
   <script src="https://nono.io/js/remote_addr.js"></script>
 </body>

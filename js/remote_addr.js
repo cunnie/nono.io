@@ -9,7 +9,6 @@ async function fetchIP(url, elementId) {
         document.getElementById(elementId).innerText = ip;
     } catch (error) {
         console.error(`Error fetching ${elementId}:`, error);
-        document.getElementById(elementId).innerText = "Not detected";
     } finally {
         clearTimeout(timeoutId);
     }
