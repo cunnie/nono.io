@@ -3,7 +3,7 @@ async function fetchIP(url, elementId) {
     const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
 
     try {
-        const response = await fetch(url + '/remote_addr', { signal: controller.signal });
+        const response = await fetch(url, { signal: controller.signal });
         if (!response.ok) throw new Error('Network response was not ok');
         const ip = await response.text();
         document.getElementById(elementId).innerText = ip;
