@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName susan (all lowercase)
-AuthUserFile /opt/http/conf/cunnie/user
-require user susan
