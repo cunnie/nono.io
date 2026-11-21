@@ -1,0 +1,19 @@
+body {
+    background-color: #999999;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.floatborder {
+    padding: 5px;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    margin: 32px;
+    float: left;
+}
+.right {
+    margin: 16px;
+    padding: 8px;
+}
+.attribution {
+	font-size: x-small;
+	font-style: italic;
+}
